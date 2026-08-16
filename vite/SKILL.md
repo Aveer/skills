@@ -1,0 +1,85 @@
+---
+name: vite
+description: Version-aware Vite build, configuration, plugin, SSR, and migration guidance. Use when working with a Vite project, vite.config.*, Vite plugins, or a verified Vite upgrade.
+license: MIT
+metadata:
+  author: Anthony Fu
+  version: "2026.1.31"
+  source: Generated from https://github.com/vitejs/vite, scripts at https://github.com/antfu/skills
+---
+
+# Vite
+
+## Version and Project Check
+
+Before applying guidance, read the project's package manifest, lockfile,
+`vite.config.*`, and existing scripts. Use only APIs supported by the installed
+Vite version. Rolldown, Oxc, Vite 6+ environment APIs, and Vite 8 migration
+guidance are conditional—not baseline recommendations. Project architecture and
+scripts override generic examples.
+
+Vite is a next-generation frontend build tool with fast dev server (native ESM + HMR) and optimized production builds.
+
+## Preferences
+
+- Use TypeScript: prefer `vite.config.ts`
+- Always use ESM, avoid CommonJS
+
+## Core
+
+| Topic         | Description                                                                    | Reference                                        |
+| ------------- | ------------------------------------------------------------------------------ | ------------------------------------------------ |
+| Configuration | `vite.config.ts`, `defineConfig`, conditional configs, `loadEnv`               | [core-config](references/core-config.md)         |
+| Features      | `import.meta.glob`, asset queries (`?raw`, `?url`), `import.meta.env`, HMR API | [core-features](references/core-features.md)     |
+| Plugin API    | Vite-specific hooks, virtual modules, plugin ordering                          | [core-plugin-api](references/core-plugin-api.md) |
+
+## Build & SSR
+
+| Topic       | Description                                                        | Reference                                    |
+| ----------- | ------------------------------------------------------------------ | -------------------------------------------- |
+| Build & SSR | Library mode, SSR middleware mode, `ssrLoadModule`, JavaScript API | [build-and-ssr](references/build-and-ssr.md) |
+
+## Conditional Advanced Topics
+
+| Topic              | Description                                                         | Reference                                              |
+| ------------------ | ------------------------------------------------------------------- | ------------------------------------------------------ |
+| Environment API    | Verify installed Vite supports multi-environment APIs first          | [environment-api](references/environment-api.md)       |
+| Rolldown Migration | Use only for a verified Vite 8 migration                             | [rolldown-migration](references/rolldown-migration.md) |
+
+## Quick Reference
+
+### CLI Commands
+
+```bash
+vite              # Start dev server
+vite build        # Production build
+vite preview      # Preview production build
+vite build --ssr  # SSR build
+```
+
+### Common Config
+
+```ts
+import { defineConfig } from 'vite'
+
+export default defineConfig({
+  plugins: [],
+  resolve: { alias: { '@': '/src' } },
+  server: { port: 3000, proxy: { '/api': 'http://localhost:8080' } },
+  build: { target: 'esnext', outDir: 'dist' },
+})
+```
+
+### Official Plugins
+
+- `@vitejs/plugin-vue` - Vue 3 SFC support
+- `@vitejs/plugin-vue-jsx` - Vue 3 JSX
+- `@vitejs/plugin-react` - React with Oxc/Babel
+- `@vitejs/plugin-react-swc` - React with SWC
+- `@vitejs/plugin-legacy` - Legacy browser support
+
+## Cross-Skill References
+
+- **Testing** → Use `vitest` skill (Vite-native testing)
+- **Vue projects** → Use `vue` skill for component patterns
+- **Library bundling** → Use `tsdown` skill for TypeScript libs
