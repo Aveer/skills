@@ -38,6 +38,9 @@ folder. It is **additive and never destructive**:
 - **Adds** skills that exist in the repo but not in the target.
 - **Updates** files of existing skills when they changed in the repo.
 - **Never removes** skills or files that exist only in the target folder.
+- **Cleans** copied files of NTFS alternate data streams (e.g. the
+  `Zone.Identifier` "Mark of the Web" that Windows attaches to downloaded
+  files), so that junk never propagates into the target folder.
 
 ```powershell
 .\mirror-skills.ps1                  # sync to %USERPROFILE%\.config\opencode\skills

@@ -41,6 +41,18 @@ param(
 
 $ErrorActionPreference = 'Stop'
 
+# Strip Windows "Mark of the Web" (Zone.Identifier) and other alternate data
+# streams from a file. Copy-Item preserves ADS, which would otherwise
+# propagate junk streams into the target folder.
+function Clear-FileStreams {
+    param([string]$FilePath)
+    $streams = Get-Item -LiteralPath $FilePath -Stream * |
+        Where-Object { $_.Stream -ne ':$DATA' }
+    foreach ($s in $streams) {
+        Remove-Item -LiteralPath $FilePath -Stream $s.Stream -ErrorAction SilentlyContinue
+    }
+}
+
 if (-not (Test-Path -LiteralPath $RepoPath)) {
     throw "Repo path not found: $RepoPath"
 }
@@ -72,6 +84,8 @@ foreach ($skill in $skills) {
         # New skill: copy the whole directory.
         if ($PSCmdlet.ShouldProcess($skill.Name, 'Add new skill')) {
             Copy-Item -Path $skill.FullName -Destination $targetSkill -Recurse -Force
+            Get-ChildItem -LiteralPath $targetSkill -Recurse -File -Force |
+                ForEach-Object { Clear-FileStreams -FilePath $_.FullName }
         }
         $added += $skill.Name
         continue
@@ -98,6 +112,7 @@ foreach ($skill in $skills) {
                     New-Item -ItemType Directory -Path $destDir -Force | Out-Null
                 }
                 Copy-Item -LiteralPath $file.FullName -Destination $destFile -Force
+                Clear-FileStreams -FilePath $destFile
             }
             $changed = $true
         }

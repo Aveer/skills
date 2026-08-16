@@ -87,9 +87,11 @@ Useful variants:
 | Skill in both, file identical | Left alone |
 | File/skill only in target | **Never touched, never removed** |
 | Repo directory without SKILL.md | Skipped with a warning |
+| Windows "Mark of the Web" streams | Stripped from copied files |
 
 The mirror only ever adds or updates. It never deletes anything from the
-target folder.
+target folder. Copied files are cleaned of NTFS alternate data streams
+(e.g. `Zone.Identifier`), so downloaded-file junk never propagates.
 
 ## Removing a Skill
 
