@@ -41,7 +41,7 @@ Do not assume every rule removed from `AGENTS.md` should become a skill.
 
 Read enough context to identify authoritative homes before proposing changes:
 
-1. Root and nested `AGENTS.md`, `CLAUDE.md`, or configured instruction files.
+1. Root and nested `AGENTS.md` or configured instruction files.
 2. Root and nearest codemaps, architecture maps, or ownership indexes.
 3. Documentation landing pages and current/archive indexes.
 4. README/contributing guidance that repeats agent instructions.
