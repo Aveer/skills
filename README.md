@@ -124,6 +124,7 @@ remove the folder from each deployment target.
 | [make-interfaces-feel-better](skills/make-interfaces-feel-better) | Design engineering principles for making interfaces feel polished. |
 | [making-product-decisions](skills/making-product-decisions) | Framework for structured product decision-making and tradeoff analysis. |
 | [marketing-psychology](skills/marketing-psychology) | Apply psychological principles and behavioral science to marketing. |
+| [media-recommender](skills/media-recommender) | Build and apply profile-driven cross-media recommendations while separating personal fit, execution confidence, and medium/platform path. |
 | [motion](skills/motion) | Animations with Motion Vue (motion-v) for Vue 3/Nuxt. |
 | [naming-cheatsheet](skills/naming-cheatsheet) | Language-agnostic naming conventions using the A/HC/LC pattern. |
 | [nextjs-image-art-direction](skills/nextjs-image-art-direction) | Art direction for Next.js images with `getImageProps()` (per-viewport images). |
