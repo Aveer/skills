@@ -96,6 +96,7 @@ remove the folder from each deployment target.
 | Skill | Description |
 | --- | --- |
 | [agent-browser](skills/agent-browser) | Browser automation CLI for AI agents: navigate pages, fill forms, click, screenshot, scrape data, and test web apps and Electron apps. |
+| [author-voice](skills/author-voice) | Build, calibrate, and apply a reusable author voice profile so editing and drafting preserve a specific writer's identity without imitating accidental typos. |
 | [business-model-canvas](skills/business-model-canvas) | Design and analyze business models using the Business Model Canvas framework. |
 | [ce-brainstorm](skills/ce-brainstorm) | Explore vague or ambitious ideas into a right-sized, requirements-only plan before building. |
 | [clonedeps](skills/clonedeps) | Clone dependency source code into a local workspace so agents can inspect library internals. |
