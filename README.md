@@ -128,6 +128,7 @@ remove the folder from each deployment target.
 | [nextjs-image-art-direction](skills/nextjs-image-art-direction) | Art direction for Next.js images with `getImageProps()` (per-viewport images). |
 | [nuxt](skills/nuxt) | Nuxt 4+ patterns: server routes, file-based routing, middleware, h3 v1, nitropack v2. |
 | [oh-my-opencode-slim](skills/oh-my-opencode-slim) | Configure and improve oh-my-opencode-slim (agents, models, prompts, skills, MCPs, presets). |
+| [pawel-voice](skills/pawel-voice) | Write, rewrite, and edit text in Paweł's calibrated authorial voice using a private canonical voice profile when available. |
 | [pest-analysis](skills/pest-analysis) | PEST (Political, Economic, Social, Technological) analysis for strategic planning. |
 | [pnpm](skills/pnpm) | Manage Node.js dependencies with pnpm: workspaces, catalogs, overrides, patches, CI. |
 | [progressive-disclosure](skills/progressive-disclosure) | Reduce complexity by revealing information progressively. |
