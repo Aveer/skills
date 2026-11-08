@@ -3,7 +3,7 @@ name: media-recommender
 description:
   Personalized cross-media recommendation and ranking workflow driven by a
   supplied taste profile. Use when recommending, comparing, prioritizing, or
-  choosing games, manga, anime, visual novels, films, or TV for a specific
+  choosing games, manga, anime, visual novels, films, TV, or books for a specific
   person while separating personal fit from general reputation, concept fit
   from execution confidence, and title fit from medium/platform fit.
 compatibility:
@@ -106,7 +106,8 @@ section may be enough.
 3. Choose the domain overlay:
    - games;
    - manga/anime/VN;
-   - films/TV.
+   - films/TV;
+   - books (fiction and nonfiction).
 
 4. Gather current facts if needed.
 

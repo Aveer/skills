@@ -23,6 +23,18 @@ Possible paths include:
 
 Do not assume reading volume itself is negative unless the user profile says so.
 
+## Books (prose fiction and nonfiction)
+
+Consider:
+
+- **Personal reading fit versus historical significance**: a foundational or acclaimed classic can still be a lower-priority read for this user;
+- conceptual payoff, discovery, emotional stakes, characterization, and narrative momentum;
+- prose density, narrative viewpoint, translation quality, and reading friction;
+- length, series commitment, structure, and whether a slow build is rewarded;
+- print/ebook/audiobook, translation and edition only when they materially change the path.
+
+Do not infer a person's opinion of novels from manga, games, or film without calibration evidence. Do not conflate prose books with manga or visual novels; use their existing overlay for those.
+
 ## Films / TV
 
 Consider:
