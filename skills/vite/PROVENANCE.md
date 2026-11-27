@@ -7,4 +7,6 @@
 
 onmax explicitly credits Anthony Fu for this skill. Local version-aware adaptations preserved. Historical onmax snapshot is a source anchor, not necessarily the exact imported revision; Vite's own frontmatter identifies the source documentation.
 
+2026-11-27 adaptation: Narrowed activation to material Vite-specific work; removed unconditional configuration preferences, migration install recipes and unsupported blanket performance comparisons.
+
 This records source attribution, not a claim of unchanged upstream content. Keep this notice and the applicable LICENSE files with distributed copies.

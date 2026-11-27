@@ -1,20 +1,25 @@
 ---
 name: typescript-best-practices
-description: >-
-  Use for a material TypeScript typing, API, compiler configuration, or type-safety question requiring specialized guidance. Do not activate for routine TypeScript edits that follow established project conventions.
+description: Use for a material TypeScript typing, API, compiler configuration, generics or type-safety question requiring specialized guidance. Not for routine TypeScript edits that follow established project conventions.
 ---
 
-# Typescript Best Practices
+# TypeScript Best Practices
 
-Use the installed compiler, existing project configuration, accepted architecture and actual compatibility requirements as authority. Prefer clear, minimal types; avoid unnecessary abstraction and runtime or compiler changes. Examples in references are advisory, version-sensitive and not a requirement to change project conventions.
+Use the selected compiler versions, actual configurations, module boundaries,
+accepted API contracts and compatibility requirements as authority. A project
+may intentionally use multiple compiler implementations or versions for
+different consumers. Do not unify them, change compiler options, replace
+generated wire types, introduce a type abstraction, or modify runtime behavior
+solely to conform to a generic preference.
 
-## Select the relevant reference
+Prefer clear types that express the existing contract. Examples are advisory
+and version-sensitive; verify actual compiler and tooling behavior when it
+matters. Apply only the relevant reference:
 
-Read only the reference that answers the current question. These are retained knowledge, not independent skills or competing workflows. Their original frontmatter and examples are historical source material; this skill and repository instructions govern activation and applicability. Do not load all references by default.
+- [General TypeScript patterns](references/typescript-best-practices.md)
+- [Advanced types](references/typescript-advanced-types.md)
+- [Interface vs. type](references/typescript-interface-vs-type.md)
+- [The satisfies operator](references/typescript-satisfies-operator.md)
 
-- [typescript-best-practices](references/typescript-best-practices.md)
-- [typescript-advanced-types](references/typescript-advanced-types.md)
-- [typescript-interface-vs-type](references/typescript-interface-vs-type.md)
-- [typescript-satisfies-operator](references/typescript-satisfies-operator.md)
-
-Apply the useful portions proportionately. Do not create new process documents, modify dependencies, or broaden task scope merely to follow a reference.
+Preserve project-owned contract tests and acceptance criteria. Do not turn a
+typing question into an architecture redesign or independent workflow.

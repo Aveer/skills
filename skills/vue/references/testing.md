@@ -256,9 +256,9 @@ it('finds teleported content', () => {
 
 - Test behavior (what user sees/does), not implementation
 - Arrange-Act-Assert structure
-- One assertion per test
+- Group assertions that establish one coherent behavior or invariant
 - Descriptive test names
-- Mock external dependencies
+- Use mocks where they establish the intended claim; retain required real producer/consumer, browser, contract and lifecycle tests
 
 **Don't:**
 
@@ -284,11 +284,6 @@ it('finds teleported content', () => {
 
 ## Running
 
-```bash
-pnpm test                          # all
-pnpm exec vitest Button.spec.ts   # specific
-pnpm exec vitest --watch           # watch
-pnpm test --coverage               # coverage
-```
+Use the actual repository package manager and documented scripts/filters. Do not bypass architecture, generated contract or qualification checks by invoking a lower-level test runner as a replacement for a mandatory gate.
 
 **Docs:** [vitest.dev](https://vitest.dev/) · [test-utils.vuejs.org](https://test-utils.vuejs.org/)

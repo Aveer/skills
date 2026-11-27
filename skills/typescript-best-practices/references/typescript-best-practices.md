@@ -25,7 +25,7 @@ generic examples.
 
 ## 1. Project Configuration
 
-Always enable `strict` mode for maximum type safety:
+Strict mode is a useful option when selecting a new configuration or undertaking an authorized compiler-policy change. Preserve the project's accepted settings and per-consumer compiler compatibility; the following configuration is illustrative, not a migration requirement:
 
 ```json
 {

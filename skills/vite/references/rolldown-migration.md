@@ -19,9 +19,9 @@ Vite 8 replaces esbuild+Rollup with Rolldown, a unified Rust-based bundler.
 
 ## Performance Impact
 
-- 10-30x faster than Rollup for production builds
-- Matches esbuild's dev performance
-- Unified behavior between dev and build
+Treat upstream performance claims as version- and workload-dependent. Measure
+the project's actual build only when the question calls for performance evidence.
+A change in bundler does not guarantee a particular speedup or runtime benefit.
 
 ## Config Migration
 
@@ -120,34 +120,14 @@ Rolldown unlocks features not possible before:
 - More flexible chunk splitting
 - Module Federation support
 
-## Gradual Migration
+## Migration scope
 
-For large projects, migrate via `rolldown-vite` first:
-
-```bash
-# Step 1: Test with rolldown-vite
-pnpm add -D rolldown-vite
-
-# Replace vite import in config
-import { defineConfig } from 'rolldown-vite'
-
-# Step 2: Once stable, upgrade to Vite 8
-pnpm add -D vite@8
-```
-
-## Overriding Vite in Frameworks
-
-When framework depends on older Vite:
-
-```json
-{
-  "pnpm": {
-    "overrides": {
-      "vite": "8.0.0"
-    }
-  }
-}
-```
+Historical transition packages and overrides are not baseline dependencies.
+Only consider changes within an explicitly authorized migration; inspect
+actual compatibility, locked versions, compiler/plugin integration and
+production output. Use the project's existing package manager and agreed
+qualification gates. Do not override transitive Vite or install an intermediate
+bundler just because this reference describes a migration.
 
 <!--
 Source references:
