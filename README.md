@@ -155,7 +155,6 @@ remove the folder from each deployment target.
 | [typescript-interface-vs-type](skills/typescript-interface-vs-type) | When to use `interface` vs. `type` in TypeScript. |
 | [typescript-satisfies-operator](skills/typescript-satisfies-operator) | Proper usage of TypeScript's `satisfies` operator vs. type annotations. |
 | [user-story-fundamentals](skills/user-story-fundamentals) | Capture requirements as structured user stories with acceptance criteria. |
-| [verification-before-completion](skills/verification-before-completion) | Run verification commands and confirm output before claiming work is complete. |
 | [verification-planning](skills/verification-planning) | Plan project-specific verification evidence for non-trivial coding work. |
 | [video](skills/video) | Create, generate, and produce video content with AI tools or programmatic frameworks. |
 | [visual-cues-cta-psychology](skills/visual-cues-cta-psychology) | Design effective CTAs using visual attention and gaze psychology. |
