@@ -24,7 +24,7 @@ No separate ChatGPT plugin copy of this collection is required. A cloud session 
 | [css-container-queries](skills/css-container-queries) | CSS container queries for component-based responsive design. | OpenCode |
 | [customer-research](skills/customer-research) | Conduct, analyze, and synthesize customer research (interviews, surveys, reviews, community mining). | On demand |
 | [jobs-to-be-done](skills/jobs-to-be-done) | Understand customer motivations through jobs-to-be-done theory. | On demand |
-| [make-interfaces-feel-better](skills/make-interfaces-feel-better) | Use for explicit UI polish or a concrete interaction/visual defect within the authorized frontend scope. Existing design system, accessibility, reduced-motion and product requirements take precedence. | Shared |
+| [make-interfaces-feel-better](skills/make-interfaces-feel-better) | Optional checklist for motion, feedback, readability, focus and visual review; product UI guidance comes first. | Shared |
 | [marketing-psychology](skills/marketing-psychology) | Use for explicit marketing, conversion research, ethical persuasion, trust signals, or campaign messaging. Do not activate for ordinary product UI, coding, or general decision-making. | On demand |
 | [media-recommender](skills/media-recommender) | Build and apply profile-driven cross-media recommendations while separating personal fit, execution confidence, and medium/platform path. | On demand |
 | [motion](skills/motion) | Use only when the project actually uses Motion Vue (motion-v), or the user explicitly wants to evaluate or adopt it for a concrete animation. Do not install it for routine UI polish. | On demand |
