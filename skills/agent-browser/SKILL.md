@@ -6,6 +6,9 @@ allowed-tools: Bash(agent-browser:*), Bash(npx agent-browser:*)
 hidden: true
 ---
 
+> Modified by Aveer in 2026: activation and installation guidance adapted for local project policy. See PROVENANCE.md.
+
+
 ## Applicability
 
 Apply these examples only within the activation scope above. Repository instructions, accepted contracts, installed versions and project conventions govern. Do not add a dependency, change architecture, expand task scope, or launch a separate process solely to follow this reference. Do not install browser runtimes or CLI tools without authorization.
