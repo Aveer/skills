@@ -1,151 +1,53 @@
 ---
 name: skills-maintenance
-description:
-  Maintain the skills repository - create new skills, modify existing ones,
-  sync skills to the OpenCode and cross-harness .agents skills folders, and
-  manage the repo. Use whenever a skill needs to be created or edited,
-  skills need to be synced, or the skills repo needs to be maintained
-  (commits, push, cleanup).
+description: Maintain Aveer/skills, its provenance and distribution policy. Use only when explicitly curating, editing, licensing, validating or synchronizing this repository; not general skill creation or routine project work.
 ---
 
 # Skills Maintenance
 
-This repo is the **source of truth** for all agent skills. Skills live in
-`skills/`; the meta skill (this one) lives at the repo root. Skills are
-deployed to two targets, kept in sync from this repo by additive mirror
-scripts:
+This repo is the canonical public library. Keep a skill only if its specialized knowledge or method materially improves work. Prefer native host facilities and project-owned contracts over duplicated general workflows. Do not mirror the repo-only maintenance skill or package private personal context.
 
-- **OpenCode:** `%USERPROFILE%\.config\opencode\skills` via
-  `mirror-skills-opencode.ps1`
-- **Cross-harness (.agents):** `%USERPROFILE%\.agents\skills` via
-  `mirror-skills-agents.ps1` — the de-facto global skills folder read
-  natively by Codex CLI, Cursor, Gemini CLI, VS Code/Copilot, and OpenCode
-  (compat). Claude Code does not read it (it uses `~/.claude/skills`).
+## 1. Curate and attribute
 
-## Repo Layout
+- Read the existing skill, its supporting files, actual source/authority, upstream license and version or historical source anchor. For a new import, inspect the exact source before copying; record the revision, path, copyright and license in `PROVENANCE.md`. Preserve all applicable upstream licenses and notices with the files, including reference-level notices when consolidating. If permission is unresolved, do not distribute a new import. For an existing ambiguous copy, report and resolve the uncertainty; do not guess or silently change its license.
+- Original repository material uses the root MIT convention. A local wrapper does not relicense third-party references. Mark adaptations and scope them to the current host and installed versions. Prefer a focused trigger and on-demand references; don't chain-load irrelevant skills.
+- Maintain `skills-policy.json`: agents = shared local ChatGPT/Codex selection; opencode = shared plus local coding references; optional = retained on-demand skills; nexusCandidates = relevant subset of agents; retired = exact historical names eligible for explicit local archival; repoOnly = maintenance skill. Keep README and THIRD_PARTY_NOTICES in sync.
+- Check for existing personal-context or project consumers and OMO bundled equivalents before retiring or renaming. Update explicit references to retired names; don't duplicate project-specific governance in global skills.
 
-```
-skills/
-├── AGENTS.md                  # Rules for agents working in this repo
-├── README.md                  # Human-facing documentation (includes the skill list)
-├── mirror-skills-opencode.ps1 # Additive sync: repo -> OpenCode skills folder
-├── mirror-skills-agents.ps1   # Additive sync: repo -> .agents skills folder
-├── skills-maintenance/        # This meta skill (root-level, not in skills/)
-└── skills/
-    └── <skill-name>/          # One directory per skill
-        ├── SKILL.md           # Required: frontmatter (name, description) + body
-        └── ...                # Optional: scripts, references, assets
-```
+## 2. Validate and publish
 
-A skill is any directory under `skills/` that contains a `SKILL.md`. The
-only skill directory at the repo root is this meta skill.
+1. Work from the live correct base and preserve unrelated edits. Review the exact diff; stage only intended files and use the repository PR workflow. Do not run a deployment mirror against an uncommitted skill/policy change.
+2. Run `python tests/check-repository.py` (PyYAML required). For mirror changes, execute `tests/test-mirror-skills.ps1` on Windows PowerShell; it creates isolated temporary fixtures. Reuse applicable evidence; do not claim host behavior from static review.
+3. Integrate only when required checks are satisfied and merge is authorized. Source of truth remains the Git repository, not local agent configuration or a plugin snapshot.
 
-## Creating a New Skill
+## 3. Synchronize on Windows
 
-1. Create a new directory under `skills/` named after the skill (kebab-case).
-2. Add a `SKILL.md` with YAML frontmatter:
-
-   ```markdown
-   ---
-   name: my-skill
-   description:
-     What the skill does. Use when <trigger conditions> - describe clearly
-     when the agent should load this skill.
-   ---
-
-   # My Skill
-
-   <instructions, workflows, examples>
-   ```
-
-   - `name` must match the directory name.
-   - `description` is what the agent sees when deciding whether to load the
-     skill. Write it as a trigger: what it does + when to use it.
-3. Add any supporting files (scripts, references) inside the skill directory.
-4. Add the skill to the "Skills" list in `README.md`.
-5. Commit and push (see "Repo Maintenance").
-6. Sync to both targets (see "Syncing").
-
-## Modifying a Skill
-
-1. Edit the skill files in this repo.
-2. If the skill's name or description changed, update the "Skills" list in
-   `README.md`.
-3. Commit and push.
-4. Run the mirrors to propagate changes.
-
-Never edit skills directly in a deployment target folder - local-only edits
-will be overwritten by the next mirror run (for files that also exist in the
-repo).
-
-## Syncing (Repo -> Target Folders)
-
-Run both mirror scripts from the repo root:
+Run commands from a clean canonical checkout after updating it. Never modify real targets before inspecting the plan.
 
 ```powershell
-.\mirror-skills-opencode.ps1   # -> %USERPROFILE%\.config\opencode\skills
-.\mirror-skills-agents.ps1     # -> %USERPROFILE%\.agents\skills
+git status --short
+.\mirror-skills-agents.ps1 -Reconcile -WhatIf
+.\mirror-skills-opencode.ps1 -Reconcile -WhatIf
 ```
 
-Useful variants:
+If the previews show exactly the intended changes, apply:
 
 ```powershell
-.\mirror-skills-opencode.ps1 -WhatIf              # preview, change nothing
-.\mirror-skills-agents.ps1 -TargetPath D:\other   # mirror to a custom folder
+.\mirror-skills-agents.ps1 -Reconcile
+.\mirror-skills-opencode.ps1 -Reconcile
 ```
 
-### Mirror semantics (additive, never destructive)
+Verify:
 
-| Situation | Behavior |
-| --- | --- |
-| Skill in repo, missing in target | Copied over in full (added) |
-| Skill in both, file changed in repo | Target file overwritten from repo |
-| Skill in both, file identical | Left alone |
-| File/skill only in target | **Never touched, never removed** |
-| Repo directory without SKILL.md | Skipped with a warning |
-| Windows "Mark of the Web" streams | Stripped from copied files |
+```powershell
+.\mirror-skills-agents.ps1 -Check
+.\mirror-skills-opencode.ps1 -Check
+```
 
-The mirrors only ever add or update. They never delete anything from the
-target folders. Copied files are cleaned of NTFS alternate data streams
-(e.g. `Zone.Identifier`), so downloaded-file junk never propagates.
+- Both wrappers use one engine. Default updates selected profiles only; changed existing directories are archived before replacement. `-Reconcile` additionally archives known retired/out-of-profile names; no target entries are deleted. Unknown/private/project-only entries remain untouched and are reported.
+- Backups are in a sibling `skill-mirror-backups` directory outside active skill discovery. Keep the backup until host behavior is verified. To recover a specific directory, inspect the backup and destination, then move it back only after protecting any replacement.
+- `-Check` reads exact managed file sets and SHA-256 hashes; managed drift fails the check, unmanaged entries do not. `-WhatIf` makes no changes.
+- `-IncludeSkill <name>` explicitly adds retained optional or other-profile skills. Pass the same include list on future checks/reconciliations, or deliberately archive it; do not create a second policy. A custom target can be specified using `-TargetPath`.
+- Source is limited to a clean tracked Git checkout. Links/reparse points and overlapping roots are refused. Copy only main file streams; source metadata is not modified.
 
-## Removing a Skill
-
-The mirrors cannot remove skills. To retire a skill:
-
-1. Delete the skill directory from `skills/`.
-2. Remove it from the "Skills" list in `README.md`.
-3. Commit and push.
-4. Manually delete the skill folder from each deployment target
-   (`%USERPROFILE%\.config\opencode\skills\<skill-name>` and
-   `%USERPROFILE%\.agents\skills\<skill-name>`).
-
-## Repo Maintenance
-
-- **Commit** after every skill change: `git add -A; git commit -m "..."`.
-  Use clear messages: `add: <skill>`, `update: <skill>`, `remove: <skill>`.
-- **Push** to the GitHub remote (`origin`) so the repo stays backed up:
-  `git push origin master`.
-- **Keep the README skill list current**: the "Skills" table in `README.md`
-  must match the directories in `skills/` (add/remove/rename entries in the
-  same commit as the skill change).
-- Keep one skill per directory under `skills/`; no loose skill files at the
-  root, no nested skill directories. The only root-level skill directory is
-  this meta skill.
-- Keep `SKILL.md` frontmatter valid (parseable YAML, `name` matches the
-  directory).
-- After structural changes (new scripts, renamed files), run
-  `.\mirror-skills-opencode.ps1 -WhatIf` and
-  `.\mirror-skills-agents.ps1 -WhatIf` to sanity-check what will sync.
-
-## Quick Reference
-
-| Task | Command / Action |
-| --- | --- |
-| Create skill | New dir under `skills/` + `SKILL.md`, README list, commit, push, mirror |
-| Edit skill | Edit in repo, README list if needed, commit, push, mirror |
-| Sync to OpenCode | `.\mirror-skills-opencode.ps1` |
-| Sync to .agents | `.\mirror-skills-agents.ps1` |
-| Preview sync | `.\mirror-skills-opencode.ps1 -WhatIf` / `.\mirror-skills-agents.ps1 -WhatIf` |
-| Remove skill | Delete dir, README list, commit, push, manual delete in both targets |
-| Backup | `git push origin master` |
+After synchronization, reload the affected host if needed, check its actual skill catalog and update explicit OMO skill grants where retired names were locally overridden. A local .agents mirror is not proof of availability in a remote ChatGPT session. Do not publish a duplicate account plugin unless explicitly needed.

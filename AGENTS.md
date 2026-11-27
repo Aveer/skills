@@ -1,78 +1,18 @@
-# AGENTS.md
+# Repository instructions
 
-Rules for agents working in this repository.
+This repository owns a curated public library of reusable Agent Skills, not every skill installed on an agent host. Read [skills-maintenance/SKILL.md](skills-maintenance/SKILL.md) for changes to this library or its distribution.
 
-## What this repo is
+## Invariants
 
-The source of truth for agent skills. Skills live in `skills/` — one skill
-per directory, where a skill is a directory containing a `SKILL.md`. The
-meta skill `skills-maintenance/` lives at the repo root: it maintains this
-repo and is not a user-facing skill.
-
-Skills are deployed to two targets, both synced additively from this repo:
-
-- **OpenCode** — `%USERPROFILE%\.config\opencode\skills` via
-  `mirror-skills-opencode.ps1`
-- **Cross-harness (.agents)** — `%USERPROFILE%\.agents\skills` via
-  `mirror-skills-agents.ps1`. This is the de-facto global skills folder
-  read natively by Codex CLI, Cursor, Gemini CLI, VS Code/Copilot, and
-  OpenCode (compat). Claude Code does not read it (it uses
-  `%USERPROFILE%\.claude\skills`).
-
-## Load the meta skill
-
-When creating or editing a skill, syncing skills, or maintaining this repo,
-load the `skills-maintenance` skill first. It contains the full workflow,
-skill format, and mirror semantics.
-
-## Hard rules
-
-1. **Repo is the source of truth.** Never edit skills directly in a
-   deployment target folder. Edit here, then mirror.
-2. **The mirrors are additive.** Both mirror scripts only add or update.
-   They never delete from the target. Do not add deletion behavior to them.
-3. **One skill per directory under `skills/`.** No loose skill files at the
-   repo root, no nested skill directories. The only skill directory at the
-   root is the meta skill `skills-maintenance/`.
-4. **Valid frontmatter.** Every `SKILL.md` must start with YAML frontmatter
-   containing `name` (matching the directory name) and `description`
-   (written as a trigger: what it does + when to use it).
-5. **Keep the README skill list current.** When adding, removing, renaming,
-   or re-describing a skill, update the "Skills" list in `README.md` in the
-   same commit.
-6. **Commit after every skill change.** Message style:
-   `add: <skill>`, `update: <skill>`, `remove: <skill>`, `chore: <what>`.
-7. **Push after committing** so the GitHub remote stays current:
-   `git push origin master`.
-
-## Standard workflow
-
-```powershell
-# after creating/editing a skill
-git add -A
-git commit -m "add: my-skill"
-git push origin master
-.\mirror-skills-opencode.ps1   # propagate to the OpenCode folder
-.\mirror-skills-agents.ps1     # propagate to the cross-harness .agents folder
-```
-
-Use `-WhatIf` on either script to preview a sync before applying it.
-
-## Removing a skill
-
-1. Delete the skill directory from `skills/`.
-2. Remove it from the "Skills" list in `README.md`.
-3. Commit and push.
-4. Manually delete the folder from each deployment target (the mirrors will
-   not do this for you).
+- One active skill per directory under `skills/`; its `SKILL.md` begins with valid YAML containing the matching name and a discriminative description. The maintenance skill is repo-only.
+- Preserve verified original license text and copyright notices. Record origin, historical source anchor, modifications and uncertainty in each skill's `PROVENANCE.md`; keep the root `THIRD_PARTY_NOTICES.md` index current. Never invent a copyright owner, license or import revision. Original repository material uses MIT; third-party material keeps its own license.
+- `skills-policy.json` is the sole deployment policy. Keep its active sets, README catalog and provenance index aligned in the same commit. Retire duplicate/bundled or no-longer-useful skills explicitly; preserve historical provenance in Git. Do not create new global workflow instructions merely because a technique exists.
+- Keep user and project-specific skills outside this public library. Never include private profiles or secrets. A shared skill must not override repository-owned architecture, security, scope or qualification.
+- Edit the canonical checkout, not deployment targets. Only mirror committed, clean skill sources. Never blindly delete or overwrite unowned local content: the mirror archives changed managed directories, preserves unknown entries, and archives excluded/retired names only with explicit `-Reconcile`. No automatic deletion or cache cleanup.
+- Stage only the relevant files; use a work-descriptive branch and PR for coordinated changes. Do not sweep unrelated uncommitted work into a commit or force push.
 
 ## Verification
 
-After changes, verify:
+Use `python tests/check-repository.py` (requires PyYAML) for the policy, catalog, frontmatter and provenance structure. Run `tests/test-mirror-skills.ps1` in Windows PowerShell for mirror behavior, especially after script or profile changes. No host installation is needed for the fixture tests. Run a read-only preview before changing real targets and a separate `-Check` afterward. Do not report native verification unless it was actually run.
 
-- `git status` is clean and the commit is pushed.
-- `.\mirror-skills-opencode.ps1 -WhatIf` and `.\mirror-skills-agents.ps1 -WhatIf`
-  report the expected added/updated skills.
-- New/changed `SKILL.md` frontmatter is valid YAML and `name` matches the
-  directory.
-- The "Skills" list in `README.md` matches the directories in `skills/`.
+Detailed commands and safe recovery are in the maintenance skill and README.

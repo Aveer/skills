@@ -1,6 +1,6 @@
 ---
 name: repository-docs-governance
-description: Use when auditing or restructuring a repository's AGENTS.md hierarchy, codemaps, documentation indexes, README guidance, and project skills; also use for periodic documentation-governance refreshes that identify stale, duplicated, misplaced, or missing repository instructions.
+description: Use for an explicit generic repository instruction or documentation-governance audit, migration, or refresh. If the repository already owns a specialized governance skill or accepted procedure, use it instead; do not load both by default.
 ---
 
 # Repository Documentation Governance
@@ -11,7 +11,7 @@ always available, while topology, procedures, and reference explanations live in
 authoritative on-demand locations.
 
 This skill does not replace a technical-writing skill for drafting user guides or
-the `codemap` skill for generating a new repository atlas.
+an existing repository or host codemap workflow for generating a new repository atlas. Do not require an optional global codemap skill.
 
 ## Choose The Mode
 
