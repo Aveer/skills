@@ -7,6 +7,8 @@ description: Diagnose and improve real-world web performance, with first-class s
 
 Measure first. Optimize the actual bottleneck. Preserve behavior and verify the result.
 
+For local-first and desktop applications, prioritize the actual user-visible interaction, service boundary, or native renderer cost rather than blindly applying public web metrics. Use the project's accepted qualification gates. Reuse relevant measurements taken against the same candidate and conditions; do not require a repeated full build or suite merely because a new session is reviewing the evidence. For remote-only analysis, distinguish source-backed findings from runtime hypotheses and specify the narrowest useful measurement without claiming it has been executed.
+
 This skill is framework-aware. Do not copy React, Webpack, browser, SSR, PWA, or deployment-specific techniques into a project until the current stack has been identified.
 
 ## Use This Skill When

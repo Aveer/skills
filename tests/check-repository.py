@@ -81,8 +81,12 @@ for name in repo_only:
     validate_skill(ROOT / name)
 
 readme = (ROOT / "README.md").read_text(encoding="utf-8")
-rows = re.findall(r"^\| \[[^\]]+\]\(skills/([^/)]+)\) \|", readme, flags=re.M)
-check(len(rows) == len(set(rows)) and set(rows) == active, "README catalog mismatch")
+rows = re.findall(r"^\| \[[^\]]+\]\(skills/([^/)]+)\) \| [^|]+ \| (Shared|OpenCode|On demand) \|$", readme, flags=re.M)
+row_names = [name for name, _ in rows]
+check(len(row_names) == len(set(row_names)) and set(row_names) == active, "README catalog mismatch")
+for name, profile in rows:
+    expected = "Shared" if name in agents else "OpenCode" if name in opencode else "On demand"
+    check(profile == expected, f"{name}: README distribution differs from policy")
 notices = (ROOT / "THIRD_PARTY_NOTICES.md").read_text(encoding="utf-8")
 notice_rows = re.findall(r"^\| \x60([a-z0-9-]+)\x60 \|", notices, flags=re.M)
 check(len(notice_rows) == len(set(notice_rows)) and set(notice_rows) == active,

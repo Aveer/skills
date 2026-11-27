@@ -8,7 +8,7 @@ Canonical curated library of reusable Agent Skills. Only install a skill when it
 
 - **Shared / .agents:** 7 selected cross-harness skills (visible to compatible local ChatGPT/Codex clients). All are potential Nexus aids, not replacements for Nexus-owned architecture/continuity or project-specific technical skills.
 - **OpenCode:** the shared set plus 6 focused Vue/TypeScript/Vite/toolchain skills. Do not mirror redundant OMO bundled workflows; native OMO implementations are preferred. The custom `verification-planning` is an intentional cross-harness adaptation.
-- **On demand:** 14 specialist skills; keep in the repository and opt in for a concrete need. Personal adapters in the private Paweł Context plugin can consume `author-voice` and `media-recommender`; do not package personal context into this public library.
+- **On demand:** 14 specialist skills; keep in the repository and opt in for a concrete need. Private personal-context adapters can consume `author-voice` and `media-recommender`; do not package personal context into this public library.
 
 No separate ChatGPT plugin copy of this collection is required. A cloud session without the local skill path may read the canonical GitHub skill when relevant. The Nexus plugin remains independently maintained. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for attribution and licenses.
 
@@ -16,33 +16,33 @@ No separate ChatGPT plugin copy of this collection is required. A cloud session 
 
 | Skill | Description | Distribution |
 | --- | --- | --- |
-| [agent-browser](skills/agent-browser) | Use when actual browser automation is needed and the harness has the agent-browser CLI, or the user explicitly requests this CLI. Prefer existing supported browser tools, connectors or project test harnesses when appropriate.  On demand |
-| [author-voice](skills/author-voice) | Build, calibrate, and apply a reusable author voice profile so editing and drafting preserve a specific writer's identity without imitating accidental typos.  On demand |
-| [behavioral-design](skills/behavioral-design) | Use when the user explicitly requests behavior change, habit formation, adoption, or retention design. Do not activate merely because onboarding, notifications, or migration are mentioned.  On demand |
-| [code-architecture-tailwind-v4-best-practices](skills/code-architecture-tailwind-v4-best-practices) | Tailwind CSS v4 patterns for buttons and components (CVA/tailwind-variants, CSS-first config).  On demand |
-| [code-architecture-wrong-abstraction](skills/code-architecture-wrong-abstraction) | When to abstract vs. duplicate code; DRY/WET decisions and refactoring abstractions.  Shared |
-| [css-container-queries](skills/css-container-queries) | CSS container queries for component-based responsive design.  OpenCode |
-| [customer-research](skills/customer-research) | Conduct, analyze, and synthesize customer research (interviews, surveys, reviews, community mining).  On demand |
-| [jobs-to-be-done](skills/jobs-to-be-done) | Understand customer motivations through jobs-to-be-done theory.  On demand |
-| [make-interfaces-feel-better](skills/make-interfaces-feel-better) | Use for explicit UI polish or a concrete interaction/visual defect within the authorized frontend scope. Existing design system, accessibility, reduced-motion and product requirements take precedence.  Shared |
-| [marketing-psychology](skills/marketing-psychology) | Use for explicit marketing, conversion research, ethical persuasion, trust signals, or campaign messaging. Do not activate for ordinary product UI, coding, or general decision-making.  On demand |
-| [media-recommender](skills/media-recommender) | Build and apply profile-driven cross-media recommendations while separating personal fit, execution confidence, and medium/platform path.  On demand |
-| [motion](skills/motion) | Use only when the project actually uses Motion Vue (motion-v), or the user explicitly wants to evaluate or adopt it for a concrete animation. Do not install it for routine UI polish.  On demand |
-| [nuxt](skills/nuxt) | Use only for an actual Nuxt project and a Nuxt-specific server, routing, rendering, composable or configuration problem; not ordinary Vue or generic SSR.  On demand |
-| [pnpm](skills/pnpm) | Manage Node.js dependencies with pnpm: workspaces, catalogs, overrides, patches, CI.  OpenCode |
-| [release-smoke-test](skills/release-smoke-test) | Use only for qualifying an Oh My OpenCode Slim release candidate or reproducing a specific compatibility regression in that plugin.  On demand |
-| [repository-docs-governance](skills/repository-docs-governance) | Generic repository documentation governance when no project-specific owner exists.  Shared |
-| [systematic-debugging](skills/systematic-debugging) | Use for a concrete non-trivial defect, regression, or failure whose cause is uncertain. Diagnose from evidence and verify proportionately; do not impose a ritual on a clear mechanical correction.  Shared |
-| [ts-library](skills/ts-library) | Use only for a concrete TypeScript library/package API, distribution, export, build or publication decision. Follow the project's actual package consumer and runtime requirements.  On demand |
-| [tsdown](skills/tsdown) | Use only when the project actually uses tsdown or explicitly evaluates it for a TypeScript package build; do not introduce it to unrelated build workflows.  On demand |
-| [typescript-best-practices](skills/typescript-best-practices) | Use for a material TypeScript typing, API, compiler configuration, or type-safety question requiring specialized guidance. Do not activate for routine TypeScript edits that follow established project conventions.  OpenCode |
-| [ux-psychology](skills/ux-psychology) | Use for a concrete usability, cognitive load, information architecture, or decision-complexity design problem. Do not activate for routine UI coding or marketing conversion.  Shared |
-| [verification-planning](skills/verification-planning) | Use before non-trivial implementation when a credible project-specific evidence path is missing or must be reconciled. Reuse accepted acceptance contracts and applicable evidence; no duplicate verification plans.  Shared |
-| [vite](skills/vite) | Version-aware Vite build, configuration, plugin, SSR, and migration guidance.  OpenCode |
-| [vitest](skills/vitest) | Unit/integration tests for Vite projects with vitest.  OpenCode |
-| [vue](skills/vue) | Vue 3 patterns: Composition API, props/emits, VueUse, reactive destructuring.  OpenCode |
-| [web-perf](skills/web-perf) | Diagnose and improve real-world web performance (Vue 3, Vite, Nuxt, Electron, Tauri).  Shared |
-| [writing-web-documentation](skills/writing-web-documentation) | Write and organize developer-facing documentation for web software projects.  On demand |
+| [agent-browser](skills/agent-browser) | Use when actual browser automation is needed and the harness has the agent-browser CLI, or the user explicitly requests this CLI. Prefer existing supported browser tools, connectors or project test harnesses when appropriate. | On demand |
+| [author-voice](skills/author-voice) | Build, calibrate, and apply a reusable author voice profile so editing and drafting preserve a specific writer's identity without imitating accidental typos. | On demand |
+| [behavioral-design](skills/behavioral-design) | Use when the user explicitly requests behavior change, habit formation, adoption, or retention design. Do not activate merely because onboarding, notifications, or migration are mentioned. | On demand |
+| [code-architecture-tailwind-v4-best-practices](skills/code-architecture-tailwind-v4-best-practices) | Tailwind CSS v4 patterns for buttons and components (CVA/tailwind-variants, CSS-first config). | On demand |
+| [code-architecture-wrong-abstraction](skills/code-architecture-wrong-abstraction) | Review concrete abstraction, coupling and duplication trade-offs; accepted architecture takes precedence. | Shared |
+| [css-container-queries](skills/css-container-queries) | CSS container queries for component-based responsive design. | OpenCode |
+| [customer-research](skills/customer-research) | Conduct, analyze, and synthesize customer research (interviews, surveys, reviews, community mining). | On demand |
+| [jobs-to-be-done](skills/jobs-to-be-done) | Understand customer motivations through jobs-to-be-done theory. | On demand |
+| [make-interfaces-feel-better](skills/make-interfaces-feel-better) | Use for explicit UI polish or a concrete interaction/visual defect within the authorized frontend scope. Existing design system, accessibility, reduced-motion and product requirements take precedence. | Shared |
+| [marketing-psychology](skills/marketing-psychology) | Use for explicit marketing, conversion research, ethical persuasion, trust signals, or campaign messaging. Do not activate for ordinary product UI, coding, or general decision-making. | On demand |
+| [media-recommender](skills/media-recommender) | Build and apply profile-driven cross-media recommendations while separating personal fit, execution confidence, and medium/platform path. | On demand |
+| [motion](skills/motion) | Use only when the project actually uses Motion Vue (motion-v), or the user explicitly wants to evaluate or adopt it for a concrete animation. Do not install it for routine UI polish. | On demand |
+| [nuxt](skills/nuxt) | Use only for an actual Nuxt project and a Nuxt-specific server, routing, rendering, composable or configuration problem; not ordinary Vue or generic SSR. | On demand |
+| [pnpm](skills/pnpm) | Manage Node.js dependencies with pnpm: workspaces, catalogs, overrides, patches, CI. | OpenCode |
+| [release-smoke-test](skills/release-smoke-test) | Use only for qualifying an Oh My OpenCode Slim release candidate or reproducing a specific compatibility regression in that plugin. | On demand |
+| [repository-docs-governance](skills/repository-docs-governance) | Generic repository documentation governance when no project-specific owner exists. | Shared |
+| [systematic-debugging](skills/systematic-debugging) | Use for a concrete non-trivial defect, regression, or failure whose cause is uncertain. Diagnose from evidence and verify proportionately; do not impose a ritual on a clear mechanical correction. | Shared |
+| [ts-library](skills/ts-library) | Use only for a concrete TypeScript library/package API, distribution, export, build or publication decision. Follow the project's actual package consumer and runtime requirements. | On demand |
+| [tsdown](skills/tsdown) | Use only when the project actually uses tsdown or explicitly evaluates it for a TypeScript package build; do not introduce it to unrelated build workflows. | On demand |
+| [typescript-best-practices](skills/typescript-best-practices) | Use for a material TypeScript typing, API, compiler configuration, or type-safety question requiring specialized guidance. Do not activate for routine TypeScript edits that follow established project conventions. | OpenCode |
+| [ux-psychology](skills/ux-psychology) | Use for a concrete usability, cognitive load, information architecture, or decision-complexity design problem. Do not activate for routine UI coding or marketing conversion. | Shared |
+| [verification-planning](skills/verification-planning) | Use before non-trivial implementation when a credible project-specific evidence path is missing or must be reconciled. Reuse accepted acceptance contracts and applicable evidence; no duplicate verification plans. | Shared |
+| [vite](skills/vite) | Version-aware Vite build, configuration, plugin, SSR, and migration guidance. | OpenCode |
+| [vitest](skills/vitest) | Unit/integration tests for Vite projects with vitest. | OpenCode |
+| [vue](skills/vue) | Vue 3 patterns: Composition API, props/emits, VueUse, reactive destructuring. | OpenCode |
+| [web-perf](skills/web-perf) | Diagnose and improve real-world web performance (Vue 3, Vite, Nuxt, Electron, Tauri). | Shared |
+| [writing-web-documentation](skills/writing-web-documentation) | Write and organize developer-facing documentation for web software projects. | On demand |
 
 ## Maintenance and synchronization
 

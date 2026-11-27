@@ -1,7 +1,12 @@
 ---
 name: code-architecture-wrong-abstraction
-description: Guides when to abstract vs duplicate code. Use this skill when creating shared utilities, deciding between DRY/WET approaches, or refactoring existing abstractions.
+description: Use when a concrete abstraction, coupling or duplication decision requires technical review. Not for routine helper edits or reopening accepted architecture.
 ---
+
+## Applicability
+
+Treat the patterns below as analytical tools, not universal rules. Accepted project contracts, actual code paths and repository architecture take precedence. Do not reopen an accepted design or perform unrelated refactoring merely because a pattern applies. Identify the concrete cost or risk and verify the smallest useful correction.
+
 
 # Code Architecture: Avoiding Wrong Abstractions
 
