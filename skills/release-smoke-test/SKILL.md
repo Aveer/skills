@@ -1,7 +1,13 @@
 ---
 name: release-smoke-test
-description: Test an oh-my-opencode-slim release candidate or bugfix before publishing. Use when validating a packed plugin artifact, release branch, crash fix, OpenCode runtime compatibility, or model-specific smoke test such as OpenCode 1.17.11 message transform regressions.
+description: >-
+  Use only for qualifying an Oh My OpenCode Slim release candidate or reproducing a specific compatibility regression in that plugin.
 ---
+
+## Applicability
+
+Apply these examples only within the activation scope above. Repository instructions, accepted contracts, installed versions and project conventions govern. Do not add a dependency, change architecture, expand task scope, or launch a separate process solely to follow this reference.
+
 
 # Release Smoke Test
 

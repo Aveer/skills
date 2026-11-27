@@ -1,12 +1,12 @@
 ---
 name: five-whys
-description:
-  Conduct root cause analysis using the Five Whys technique. Use when
-  investigating problems, debugging issues, understanding failures, analyzing
-  churn, or finding the underlying cause of any issue.
+description: >-
+  Use when a user explicitly requests Five Whys or a specific causal investigation benefits from that technique. Do not impose on routine bug fixes or every issue.
 ---
 
 # Five Whys - Root Cause Analysis
+
+Use as an optional analytical technique only when it improves the specific task. Existing project procedures and accepted decisions take precedence; do not require a separate artifact or repeat analysis already established by evidence.
 
 Systematic guide to uncovering root causes through iterative questioning,
 originally developed by Sakichi Toyoda for Toyota Motor Corporation.

@@ -1,12 +1,12 @@
 ---
 name: hypothesis-tree
-description:
-  Structure complex questions into testable hypotheses. Use when validating
-  product ideas, debugging problems, planning experiments, or breaking down
-  ambiguous challenges into actionable research.
+description: >-
+  Use when a genuinely uncertain research or diagnostic problem needs multiple competing, testable hypotheses. Do not activate for already established causes or routine decisions.
 ---
 
 # Hypothesis Tree - Structured Problem Decomposition
+
+Use as an optional analytical technique only when it improves the specific task. Existing project procedures and accepted decisions take precedence; do not require a separate artifact or repeat analysis already established by evidence.
 
 A Hypothesis Tree is a structured approach to breaking down complex questions
 into testable hypotheses. Originally from management consulting (McKinsey), it

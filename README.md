@@ -95,75 +95,69 @@ remove the folder from each deployment target.
 
 | Skill | Description |
 | --- | --- |
-| [agent-browser](skills/agent-browser) | Browser automation CLI for AI agents: navigate pages, fill forms, click, screenshot, scrape data, and test web apps and Electron apps. |
+| [agent-browser](skills/agent-browser) | Use when actual browser automation is needed and the harness has the agent-browser CLI, or the user explicitly requests this CLI. Prefer existing supported browser tools, connectors or project test harnesses when appropriate. |
 | [author-voice](skills/author-voice) | Build, calibrate, and apply a reusable author voice profile so editing and drafting preserve a specific writer's identity without imitating accidental typos. |
+| [behavioral-design](skills/behavioral-design) | Use when the user explicitly requests behavior change, habit formation, adoption, or retention design. Do not activate merely because onboarding, notifications, or migration are mentioned. |
 | [business-model-canvas](skills/business-model-canvas) | Design and analyze business models using the Business Model Canvas framework. |
-| [ce-brainstorm](skills/ce-brainstorm) | Explore vague or ambitious ideas into a right-sized, requirements-only plan before building. |
+| [ce-brainstorm](skills/ce-brainstorm) | Use only when the user explicitly requests ce-brainstorm or collaborative requirements exploration for a genuinely unresolved product decision. Never use for accepted specifications, implementation, or a technology verdict. |
 | [clonedeps](skills/clonedeps) | Clone dependency source code into a local workspace so agents can inspect library internals. |
 | [code-architecture-tailwind-v4-best-practices](skills/code-architecture-tailwind-v4-best-practices) | Tailwind CSS v4 patterns for buttons and components (CVA/tailwind-variants, CSS-first config). |
 | [code-architecture-wrong-abstraction](skills/code-architecture-wrong-abstraction) | When to abstract vs. duplicate code; DRY/WET decisions and refactoring abstractions. |
 | [codemap](skills/codemap) | Generate comprehensive hierarchical codemaps for unfamiliar repositories. |
-| [cognitive-biases](skills/cognitive-biases) | Apply cognitive bias knowledge to product design and decision-making. |
-| [cognitive-fluency-psychology](skills/cognitive-fluency-psychology) | Use cognitive fluency principles to improve clarity, trust, and conversion. |
-| [cognitive-load](skills/cognitive-load) | Design experiences that optimize mental resources using Cognitive Load Theory. |
 | [css-container-queries](skills/css-container-queries) | CSS container queries for component-based responsive design. |
-| [curiosity-gap](skills/curiosity-gap) | Create engagement through strategic information gaps that drive user action. |
 | [customer-research](skills/customer-research) | Conduct, analyze, and synthesize customer research (interviews, surveys, reviews, community mining). |
-| [deepwork](skills/deepwork) | High-cost orchestrator workflow for large, high-risk, multi-phase coding efforts. |
-| [find-skills](skills/find-skills) | Help users discover and install agent skills. |
-| [five-whys](skills/five-whys) | Root cause analysis using the Five Whys technique. |
-| [fogg-behavior-model](skills/fogg-behavior-model) | Design behavior change using the B=MAP framework. |
-| [graph-thinking](skills/graph-thinking) | Graph-based thinking for mapping dependencies and solving problems non-linearly. |
-| [halo-effect-psychology](skills/halo-effect-psychology) | Apply the halo effect in product design and UX. |
-| [hicks-law](skills/hicks-law) | Optimize decision speed by managing the quantity of choices. |
-| [hypothesis-tree](skills/hypothesis-tree) | Structure complex questions into testable hypotheses. |
-| [image](skills/image) | Create, generate, edit, and optimize marketing images with AI tools. |
+| [deepwork](skills/deepwork) | Use only in an active Oh My OpenCode Slim orchestrator for large, high-risk dependent work that lacks an existing project-owned execution plan. Do not activate for Nexus foundation work, routine changes, or generic ChatGPT/Codex orchestration. |
+| [find-skills](skills/find-skills) | Use only when the user explicitly asks to discover, compare, install or manage agent skills. Not for ordinary how-to questions or work that existing capabilities can perform. |
+| [five-whys](skills/five-whys) | Use when a user explicitly requests Five Whys or a specific causal investigation benefits from that technique. Do not impose on routine bug fixes or every issue. |
+| [graph-thinking](skills/graph-thinking) | Use when explicit dependency or relationship mapping materially helps solve a complex problem. Do not activate for every architectural or code task. |
+| [hypothesis-tree](skills/hypothesis-tree) | Use when a genuinely uncertain research or diagnostic problem needs multiple competing, testable hypotheses. Do not activate for already established causes or routine decisions. |
+| [image](skills/image) | Use only for actual marketing/brand visual creation, image optimization, or a concrete image production workflow. Do not activate merely because image tools or design platforms are mentioned. |
 | [jobs-to-be-done](skills/jobs-to-be-done) | Understand customer motivations through jobs-to-be-done theory. |
-| [loop-engineering](skills/loop-engineering) | Loop engineering runtime: Grill + Monitor. |
-| [loss-aversion-psychology](skills/loss-aversion-psychology) | Leverage loss aversion in product design and messaging. |
-| [make-interfaces-feel-better](skills/make-interfaces-feel-better) | Design engineering principles for making interfaces feel polished. |
-| [making-product-decisions](skills/making-product-decisions) | Framework for structured product decision-making and tradeoff analysis. |
-| [marketing-psychology](skills/marketing-psychology) | Apply psychological principles and behavioral science to marketing. |
+| [loop-engineering](skills/loop-engineering) | Use only when explicitly requesting a bounded loop in a compatible Oh My OpenCode Slim Grill/Monitor runtime with the required loop API. Not for ordinary iterative implementation or verification. |
+| [make-interfaces-feel-better](skills/make-interfaces-feel-better) | Use for explicit UI polish or a concrete interaction/visual defect within the authorized frontend scope. Existing design system, accessibility, reduced-motion and product requirements take precedence. |
+| [making-product-decisions](skills/making-product-decisions) | Use for material unresolved product trade-offs requiring a structured decision. Do not reopen accepted decisions or require a fixed number of alternatives. |
+| [marketing-psychology](skills/marketing-psychology) | Use for explicit marketing, conversion research, ethical persuasion, trust signals, or campaign messaging. Do not activate for ordinary product UI, coding, or general decision-making. |
 | [media-recommender](skills/media-recommender) | Build and apply profile-driven cross-media recommendations while separating personal fit, execution confidence, and medium/platform path. |
-| [motion](skills/motion) | Animations with Motion Vue (motion-v) for Vue 3/Nuxt. |
-| [naming-cheatsheet](skills/naming-cheatsheet) | Language-agnostic naming conventions using the A/HC/LC pattern. |
-| [nextjs-image-art-direction](skills/nextjs-image-art-direction) | Art direction for Next.js images with `getImageProps()` (per-viewport images). |
-| [nuxt](skills/nuxt) | Nuxt 4+ patterns: server routes, file-based routing, middleware, h3 v1, nitropack v2. |
-| [oh-my-opencode-slim](skills/oh-my-opencode-slim) | Configure and improve oh-my-opencode-slim (agents, models, prompts, skills, MCPs, presets). |
+| [motion](skills/motion) | Use only when the project actually uses Motion Vue (motion-v), or the user explicitly wants to evaluate or adopt it for a concrete animation. Do not install it for routine UI polish. |
+| [naming-cheatsheet](skills/naming-cheatsheet) | Use when explicitly reviewing naming or a concrete naming ambiguity cannot be resolved from project conventions; advisory only, not a mandatory rename pass. |
+| [nextjs-image-art-direction](skills/nextjs-image-art-direction) | Use only for Next.js image art direction when different viewports genuinely need different assets or crops and the installed API supports it. |
+| [nuxt](skills/nuxt) | Use only for an actual Nuxt project and a Nuxt-specific server, routing, rendering, composable or configuration problem; not ordinary Vue or generic SSR. |
+| [oh-my-opencode-slim](skills/oh-my-opencode-slim) | Use only for actual Oh My OpenCode Slim configuration, model routing, agent prompts, MCP or plugin behavior changes. Do not use for generic orchestration or unrelated agent platforms. |
 | [pest-analysis](skills/pest-analysis) | PEST (Political, Economic, Social, Technological) analysis for strategic planning. |
 | [pnpm](skills/pnpm) | Manage Node.js dependencies with pnpm: workspaces, catalogs, overrides, patches, CI. |
-| [progressive-disclosure](skills/progressive-disclosure) | Reduce complexity by revealing information progressively. |
-| [project-structure](skills/project-structure) | React/Next.js/TypeScript project organization using feature-based architecture. |
-| [react-key-prop](skills/react-key-prop) | Proper usage of the `key` prop in React lists. |
-| [react-use-callback](skills/react-use-callback) | Proper usage of the `useCallback` hook in React. |
-| [react-use-client-boundary](skills/react-use-client-boundary) | Proper usage of the `"use client"` directive in React/Next.js. |
-| [react-use-state](skills/react-use-state) | Proper usage of the React `useState` hook. |
-| [reflect](skills/reflect) | Review recent work, find repeated workflow patterns, suggest reusable skills, agents, and playbooks. |
-| [release-smoke-test](skills/release-smoke-test) | Test an oh-my-opencode-slim release candidate or bugfix before publishing. |
+| [project-structure](skills/project-structure) | Use only for a React or Next.js project whose architecture or file organization genuinely needs design or reorganization. Never impose this React-specific structure on Vue, other frameworks, or an accepted repository architecture. |
+| [react-key-prop](skills/react-key-prop) | Use only for React list identity or reconciliation bugs, or non-trivial React key selection; not Vue lists or routine rendering. |
+| [react-use-callback](skills/react-use-callback) | Use only for a React callback identity or measured rendering performance problem where useCallback is relevant. Do not activate for Vue or routine callback creation. |
+| [react-use-client-boundary](skills/react-use-client-boundary) | Use only for React Server Components or Next.js App Router client-server boundary decisions and related errors. |
+| [react-use-state](skills/react-use-state) | Use only for a non-trivial React useState or state ownership problem. Not for other frameworks or routine React component edits. |
+| [reflect](skills/reflect) | Use when the user explicitly requests review of past agent sessions or recurring workflow friction. Inspect relevant existing settings and evidence; do not automatically change agent configuration. |
+| [release-smoke-test](skills/release-smoke-test) | Use only for qualifying an Oh My OpenCode Slim release candidate or reproducing a specific compatibility regression in that plugin. |
 | [repository-docs-governance](skills/repository-docs-governance) | Audit and restructure a repository's AGENTS.md hierarchy, codemaps, and documentation. |
-| [self-initiated-triggers](skills/self-initiated-triggers) | Design internal triggers for sustained user engagement. |
-| [simplify](skills/simplify) | Simplify and refine recently modified code for clarity and consistency. |
-| [social-proof-psychology](skills/social-proof-psychology) | Leverage social proof to build trust and influence user behavior. |
-| [status-quo-bias](skills/status-quo-bias) | Design for users' preference for the current state over change. |
-| [systematic-debugging](skills/systematic-debugging) | Systematic debugging before proposing fixes for any bug or test failure. |
+| [simplify](skills/simplify) | Use only when the user requests simplification or the current authorized change has a concrete maintainability problem. Preserve behavior, scope and project contracts; do not initiate routine post-implementation refactoring. |
+| [systematic-debugging](skills/systematic-debugging) | Use for a concrete non-trivial defect, regression, or failure whose cause is uncertain. Diagnose from evidence and verify proportionately; do not impose a ritual on a clear mechanical correction. |
 | [theme-epic-story](skills/theme-epic-story) | Structure product work hierarchically using themes, epics, and stories. |
-| [trust-psychology](skills/trust-psychology) | Build trust signals that reduce perceived risk and enable user action. |
-| [ts-library](skills/ts-library) | Authoring TypeScript libraries: setup, exports, build tooling, API design, publishing. |
-| [tsdown](skills/tsdown) | Bundling TypeScript libraries with tsdown: dual ESM/CJS, `.d.ts`, validation. |
-| [typescript-advanced-types](skills/typescript-advanced-types) | TypeScript advanced type system: generics, conditional/mapped types, template literals. |
-| [typescript-best-practices](skills/typescript-best-practices) | TypeScript best practices for type safety, organization, and maintainability. |
-| [typescript-interface-vs-type](skills/typescript-interface-vs-type) | When to use `interface` vs. `type` in TypeScript. |
-| [typescript-satisfies-operator](skills/typescript-satisfies-operator) | Proper usage of TypeScript's `satisfies` operator vs. type annotations. |
+| [ts-library](skills/ts-library) | Use only for a concrete TypeScript library/package API, distribution, export, build or publication decision. Follow the project's actual package consumer and runtime requirements. |
+| [tsdown](skills/tsdown) | Use only when the project actually uses tsdown or explicitly evaluates it for a TypeScript package build; do not introduce it to unrelated build workflows. |
+| [typescript-best-practices](skills/typescript-best-practices) | Use for a material TypeScript typing, API, compiler configuration, or type-safety question requiring specialized guidance. Do not activate for routine TypeScript edits that follow established project conventions. |
 | [user-story-fundamentals](skills/user-story-fundamentals) | Capture requirements as structured user stories with acceptance criteria. |
-| [verification-planning](skills/verification-planning) | Plan project-specific verification evidence for non-trivial coding work. |
-| [video](skills/video) | Create, generate, and produce video content with AI tools or programmatic frameworks. |
-| [visual-cues-cta-psychology](skills/visual-cues-cta-psychology) | Design effective CTAs using visual attention and gaze psychology. |
+| [ux-psychology](skills/ux-psychology) | Use for a concrete usability, cognitive load, information architecture, or decision-complexity design problem. Do not activate for routine UI coding or marketing conversion. |
+| [verification-planning](skills/verification-planning) | Use before non-trivial implementation when a credible project-specific evidence path is missing or must be reconciled. Reuse accepted acceptance contracts and applicable evidence; no duplicate verification plans. |
+| [video](skills/video) | Use only for actual video creation, editing, rendering, or production workflows. Do not activate for media discussion or mentions of video platforms. |
 | [vite](skills/vite) | Version-aware Vite build, configuration, plugin, SSR, and migration guidance. |
 | [vitest](skills/vitest) | Unit/integration tests for Vite projects with vitest. |
 | [vue](skills/vue) | Vue 3 patterns: Composition API, props/emits, VueUse, reactive destructuring. |
 | [web-perf](skills/web-perf) | Diagnose and improve real-world web performance (Vue 3, Vite, Nuxt, Electron, Tauri). |
-| [worktrees](skills/worktrees) | Manage Git worktrees as isolated coding lanes for complex or parallel work. |
+| [worktrees](skills/worktrees) | Use when Git worktree isolation materially protects another active checkout or enables genuinely independent coding lanes. Use the repository's and harness's worktree policy first; never create extra lanes for routine work. |
 | [writing-web-documentation](skills/writing-web-documentation) | Write and organize developer-facing documentation for web software projects. |
+
+## Consolidated skills
+
+The following old skill names have been retired. Their original guidance and licenses are retained in the replacement skill's `references/` directory. After pulling this change, manually remove the retired directories from both additive mirror targets; update any explicit references in local agent configuration.
+
+- `ux-psychology`: `cognitive-biases`, `cognitive-fluency-psychology`, `cognitive-load`, `hicks-law`, `progressive-disclosure`.
+- `marketing-psychology`: `halo-effect-psychology`, `loss-aversion-psychology`, `social-proof-psychology`, `trust-psychology`, `visual-cues-cta-psychology`.
+- `behavioral-design`: `fogg-behavior-model`, `curiosity-gap`, `self-initiated-triggers`, `status-quo-bias`.
+- `typescript-best-practices`: `typescript-advanced-types`, `typescript-interface-vs-type`, `typescript-satisfies-operator`.
 
 ## Notes
 

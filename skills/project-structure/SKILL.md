@@ -1,7 +1,13 @@
 ---
 name: project-structure
-description: Guides React/Next.js/TypeScript project organization using feature-based architecture. Use when structuring new projects, reorganizing codebases, or deciding where to place new code.
+description: >-
+  Use only for a React or Next.js project whose architecture or file organization genuinely needs design or reorganization. Never impose this React-specific structure on Vue, other frameworks, or an accepted repository architecture.
 ---
+
+## Applicability
+
+Repository instructions, accepted contracts, installed versions and existing project conventions govern. Apply these examples only within the activation scope above. Do not add dependencies or change architecture solely to follow this reference.
+
 
 # Project Structure: Feature-Based Architecture
 

@@ -1,12 +1,12 @@
 ---
 name: making-product-decisions
-description:
-  Framework for structured product decision-making. Use when facing complex
-  tradeoffs, aligning stakeholders, documenting decisions, or choosing between
-  multiple valid approaches.
+description: >-
+  Use for material unresolved product trade-offs requiring a structured decision. Do not reopen accepted decisions or require a fixed number of alternatives.
 ---
 
 # Making Product Decisions - Structured Decision Framework
+
+Use proportionately for unresolved product decisions only. Existing accepted product and architecture decisions are constraints, not invitations to reopen them.
 
 A meta-framework for making and documenting product decisions. Combines decision
 science principles with practical product management needs to ensure better
@@ -70,7 +70,7 @@ Most product decisions should be data-informed, not purely data-driven.
 
 ### Step 2: Generate Options
 
-Always have at least 3 options:
+Consider the meaningful alternatives (including keeping the current design when relevant). Do not fabricate a third option:
 
 1. Do nothing / status quo
 2. Option A

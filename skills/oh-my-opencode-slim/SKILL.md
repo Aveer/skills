@@ -1,7 +1,13 @@
 ---
 name: oh-my-opencode-slim
-description: Configure and improve oh-my-opencode-slim for the current user. Use when users want to tune agents, models, prompts, custom agents, skills, MCPs, presets, or plugin behavior. Also use when recurring workflow friction suggests a safe config or prompt improvement.
+description: >-
+  Use only for actual Oh My OpenCode Slim configuration, model routing, agent prompts, MCP or plugin behavior changes. Do not use for generic orchestration or unrelated agent platforms.
 ---
+
+## Applicability
+
+Apply these examples only within the activation scope above. Repository instructions, accepted contracts, installed versions and project conventions govern. Do not add a dependency, change architecture, expand task scope, or launch a separate process solely to follow this reference.
+
 
 # oh-my-opencode-slim Configuration Skill
 

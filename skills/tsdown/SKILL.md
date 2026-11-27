@@ -1,8 +1,14 @@
 ---
 name: tsdown
-description: Use when bundling TypeScript libraries - provides tsdown configuration, dual ESM/CJS output, .d.ts generation, package validation, and plugin authoring
+description: >-
+  Use only when the project actually uses tsdown or explicitly evaluates it for a TypeScript package build; do not introduce it to unrelated build workflows.
 license: MIT
 ---
+
+## Applicability
+
+Apply these examples only within the activation scope above. Repository instructions, accepted contracts, installed versions and project conventions govern. Do not add a dependency, change architecture, expand task scope, or launch a separate process solely to follow this reference.
+
 
 # tsdown
 

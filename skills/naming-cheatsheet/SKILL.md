@@ -1,7 +1,13 @@
 ---
 name: naming-cheatsheet
-description: Apply language-agnostic naming conventions using the A/HC/LC pattern. Use when naming variables, functions, or reviewing code for naming consistency.
+description: >-
+  Use when explicitly reviewing naming or a concrete naming ambiguity cannot be resolved from project conventions; advisory only, not a mandatory rename pass.
 ---
+
+## Applicability
+
+Apply these examples only within the activation scope above. Repository instructions, accepted contracts, installed versions and project conventions govern. Do not add a dependency, change architecture, expand task scope, or launch a separate process solely to follow this reference. Do not override established symbols or public contracts.
+
 
 # Naming Cheatsheet
 
