@@ -1,8 +1,14 @@
 ---
 name: ts-library
-description: Use when authoring TypeScript libraries or npm packages - covers project setup, package.json exports, build tooling (tsdown/unbuild), API design patterns, type inference tricks, testing, and publishing to npm. Use when bundling, configuring dual CJS/ESM output, or setting up release workflows.
+description: >-
+  Use only for a concrete TypeScript library/package API, distribution, export, build or publication decision. Follow the project's actual package consumer and runtime requirements.
 license: MIT
 ---
+
+## Applicability
+
+Apply these examples only within the activation scope above. Repository instructions, accepted contracts, installed versions and project conventions govern. Do not add a dependency, change architecture, expand task scope, or launch a separate process solely to follow this reference. Select ESM, CJS or dual format according to real consumers; dual distribution is optional.
+
 
 # TypeScript Library Development
 
@@ -96,7 +102,7 @@ export default defineConfig({
 ## Key Principles
 
 - ESM-first: `"type": "module"` with `.mjs` outputs
-- Dual format: always support both CJS and ESM consumers
+- Distribution format: support only the formats required by actual consumers; dual output is optional
 - `moduleResolution: "Bundler"` for modern TypeScript
 - tsdown for most builds, unbuild for complex cases
 - Smart defaults: detect environment, don't force config

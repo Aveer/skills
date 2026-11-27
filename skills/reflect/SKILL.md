@@ -1,7 +1,13 @@
 ---
 name: reflect
-description: Review recent work, find repeated workflow patterns, and suggest reusable skills, agents, commands, config changes, or playbooks. Use when the user asks to learn from past sessions, improve recurring workflows, or identify what should be turned into reusable agent instructions.
+description: >-
+  Use when the user explicitly requests review of past agent sessions or recurring workflow friction. Inspect relevant existing settings and evidence; do not automatically change agent configuration.
 ---
+
+## Applicability
+
+Apply these examples only within the activation scope above. Repository instructions, accepted contracts, installed versions and project conventions govern. Do not add a dependency, change architecture, expand task scope, or launch a separate process solely to follow this reference. Apply configuration changes only with authorization.
+
 
 # Reflect
 
