@@ -1,79 +1,30 @@
 ---
 name: vitest
-description: Use when writing unit/integration tests for Vite projects - configure vitest.config.ts, write test suites with describe/it, create mock implementations with vi.fn and vi.mock, set up code coverage thresholds, and run tests in parallel
+description: Use for a concrete Vitest API, fixture, mocking, timer, environment, configuration or test-diagnostic problem in a project that uses Vitest. Not a mandatory testing or verification methodology.
 license: MIT
 ---
 
 # Vitest
 
-Vite-native testing framework with Jest-compatible API.
+Use the installed Vitest version, current test configuration, repository test
+scripts and accepted behavioral/architecture contracts. Follow the real
+package manager. Do not change coverage thresholds, pools, parallelism,
+dependency versions or the selected test stack simply to match an example.
 
-## When to Use
+Read only the relevant reference:
 
-- Writing unit/integration tests for Vite projects
-- Testing Vue/React/Svelte components
-- Mocking modules, timers, or dates
-- Running concurrent/parallel tests
-- Type testing with TypeScript
+| Topic | Reference |
+| --- | --- |
+| Configuration, CLI, projects | [config](references/config.md) |
+| Test API, hooks and fixtures | [test-api](references/test-api.md) |
+| Mocks, timers, spies | [mocking](references/mocking.md) |
+| Assertions, snapshots, filtering, coverage | [utilities](references/utilities.md) |
+| Environments, browser mode, type tests | [advanced](references/advanced.md) |
 
-## Quick Start
-
-First inspect the project's installed Vitest version, existing config, and
-package scripts. Reuse the project's package manager and scripts; do not add or
-upgrade Vitest merely to follow this skill. Browser mode, projects, typecheck,
-pool, and coverage options are version-sensitive.
-
-```bash
-# Run the repository's documented test script.
-```
-
-```ts
-// vitest.config.ts
-import { defineConfig } from 'vitest/config'
-
-export default defineConfig({
-  test: {
-    globals: true,
-    environment: 'node',  // or 'jsdom' for DOM tests
-  },
-})
-```
-
-```ts
-// example.test.ts
-import { describe, expect, it, vi } from 'vitest'
-
-describe('math', () => {
-  it('adds numbers', () => {
-    expect(1 + 1).toBe(2)
-  })
-})
-```
-
-## Reference Files
-
-| Task                                     | File                                    |
-| ---------------------------------------- | --------------------------------------- |
-| Configuration, CLI, projects             | [config.md](references/config.md)       |
-| test/describe, hooks, fixtures           | [test-api.md](references/test-api.md)   |
-| vi.fn, vi.mock, timers, spies            | [mocking.md](references/mocking.md)     |
-| expect, snapshots, coverage, filtering   | [utilities.md](references/utilities.md) |
-| Environments, type testing, browser mode | [advanced.md](references/advanced.md)   |
-
-## Loading Files
-
-**Consider loading these reference files based on your task:**
-
-- [ ] [references/config.md](references/config.md) - if setting up vitest.config.ts, CLI, or workspace projects
-- [ ] [references/test-api.md](references/test-api.md) - if writing test/describe blocks, using hooks, or test fixtures
-- [ ] [references/mocking.md](references/mocking.md) - if mocking modules, timers, dates, or using spies
-- [ ] [references/utilities.md](references/utilities.md) - if writing assertions, snapshots, or configuring coverage
-- [ ] [references/advanced.md](references/advanced.md) - if configuring test environments, type testing, or browser mode
-
-**DO NOT load all files at once.** Load only what's relevant to your current task.
-
-## Cross-Skill References
-
-- **Vue component testing** → Use `vue` skill for component patterns
-- **Library testing** → Use `ts-library` skill for library patterns
-- **Vite configuration** → Use `vite` skill for shared config
+Use the actual tests and project gate for the intended claim. Mocks and DOM
+emulators are useful for some claims; do not present them as proof of native
+browser, real dependency, integration or lifecycle behavior when those are
+required. An accepted test mapping and applicable existing evidence take
+precedence over generic testing recipes. No mandatory extra test plan,
+coverage change, test count, full-suite run or review phase follows from this
+reference. Confirm version-sensitive APIs before using them.

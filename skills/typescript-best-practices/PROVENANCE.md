@@ -12,4 +12,6 @@ Locally authored routing entry point; retained references are third-party materi
 - `references/typescript-interface-vs-type.md`: [historical skill](https://github.com/flpbalada/my-opencode-config/blob/6b42487d6121ae8f69df1924e4fefc9040e610b4/skills/typescript-interface-vs-type/SKILL.md), [MIT license](https://github.com/flpbalada/my-opencode-config/blob/6b42487d6121ae8f69df1924e4fefc9040e610b4/LICENSE), copyright 2025 Filip Balada. Historical content matched or traced to the licensed source.
 - `references/typescript-satisfies-operator.md`: [historical skill](https://github.com/flpbalada/my-opencode-config/blob/6b42487d6121ae8f69df1924e4fefc9040e610b4/skills/typescript-satisfies-operator/SKILL.md), [MIT license](https://github.com/flpbalada/my-opencode-config/blob/6b42487d6121ae8f69df1924e4fefc9040e610b4/LICENSE), copyright 2025 Filip Balada. Strong textual match; exact original revision not recovered.
 
+2026-11-27 adaptation: Clarified selected compiler/toolchain and generated contract authority, including mixed compiler setups; historical strict-mode example is conditional.
+
 This records source attribution, not a claim of unchanged upstream content. Keep this notice and the applicable LICENSE files with distributed copies.

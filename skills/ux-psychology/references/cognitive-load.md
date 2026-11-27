@@ -1,12 +1,7 @@
----
-name: cognitive-load
-description:
-  Design experiences that optimize mental resources using Cognitive Load Theory.
-  Use when designing interfaces, creating onboarding flows, planning information
-  architecture, or improving task completion rates.
----
-
 # Cognitive Load - Designing for Human Memory
+
+> **Applicability:** Distinguish intrinsic task complexity from unnecessary effort. Do not treat memory-capacity estimates or example item counts as UI limits. Expert users may need dense direct access. Default selections, progressive disclosure, and removing options are not automatic interventions; preserve user choice, visibility and recovery. See [the skill's scope](../SKILL.md). The following retained upstream material is advisory; disregard imperatives that conflict with this scope or the project's contracts.
+
 
 Cognitive Load Theory (CLT), developed by John Sweller, provides a framework for
 designing experiences that work with human working memory limitations.

@@ -1,12 +1,7 @@
----
-name: cognitive-biases
-description:
-  Apply cognitive bias knowledge to product design and decision-making. Use when
-  designing user experiences, analyzing user behavior, improving conversions, or
-  ensuring ethical design practices.
----
-
 # Cognitive Biases - Psychology for Product Design
+
+> **Applicability:** Use biases diagnostically to identify misunderstandings or distorted choices. Do not exploit loss aversion, scarcity, social proof, defaults or framing to drive conversion or compliance. Preserve meaningful neutral choices, explicit consent, honest uncertainty, and actual authorization. Marketing examples and output templates are historical illustrations, not product UX instructions. See [the skill's scope](../SKILL.md). The following retained upstream material is advisory; disregard imperatives that conflict with this scope or the project's contracts.
+
 
 Understanding psychological patterns that influence human decision-making, first
 systematically studied by Kahneman and Tversky. Essential for creating user

@@ -2,7 +2,7 @@
 
 Type-safe routing patterns for Vue Router.
 
-> **For Nuxt:** Use file-based routing instead. See `nuxt` skill for Nuxt routing patterns.
+> Examples apply only to the installed Router version and existing routing ownership. Preserve explicit route registration and manifest-driven routing where required. Nuxt-specific conventions apply only to actual Nuxt projects.
 
 ## Route Meta Types
 
@@ -29,45 +29,16 @@ route.meta.requiresAuth // boolean | undefined (typed!)
 route.meta.title // string | undefined
 ```
 
-## Typed Route Params with unplugin-vue-router
+## Typed Route Params
 
-Use `unplugin-vue-router` for fully typed routes:
-
-```bash
-pnpm add -D unplugin-vue-router
-```
-
-```ts
-// vite.config.ts
-import VueRouter from 'unplugin-vue-router/vite'
-
-export default defineConfig({
-  plugins: [VueRouter(), Vue()], // VueRouter BEFORE Vue
-})
-```
-
-**Typed useRoute:**
-
-```ts
-// Auto-generated route types from file structure
-const route = useRoute('/users/[id]')
-route.params.id // string (typed!)
-
-const route = useRoute('/posts/[...slug]')
-route.params.slug // string[] (typed!)
-```
-
-**Typed router.push:**
-
-```ts
-const router = useRouter()
-
-// ✅ Type-checked
-router.push({ name: '/users/[id]', params: { id: '123' } })
-
-// ❌ TypeScript error - wrong param
-router.push({ name: '/users/[id]', params: { userId: '123' } })
-```
+Use the project's existing typed route definitions and generated types when
+available. Consult the installed Vue Router version's documented mechanisms
+for named routes and parameter types. File-based generation or an
+`unplugin-vue-router` integration is only relevant where already adopted or
+explicitly under evaluation; this reference does not authorize adding it,
+replacing explicit routes, or changing route ownership. Validate normalized
+params at the consuming boundary when the route permits optional or repeated
+segments.
 
 ## Scroll Behavior Types
 
