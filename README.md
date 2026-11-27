@@ -46,7 +46,34 @@ No separate ChatGPT plugin copy of this collection is required. A cloud session 
 
 ## Maintenance and synchronization
 
-Read [AGENTS.md](AGENTS.md) and [skills-maintenance/SKILL.md](skills-maintenance/SKILL.md). The local maintenance skill is repo-only, not a global skill. Retired names and profiles are tracked in `skills-policy.json`. Retired and excluded local copies require explicit reconciliation; preserve unrelated private/project skills.
+Read [AGENTS.md](AGENTS.md) and [skills-maintenance/SKILL.md](skills-maintenance/SKILL.md). The maintenance skill is repo-only, not a global skill.
+
+The two existing mirror commands now use one shared engine, `mirror-skills.ps1`. They require a clean committed source and mirror only their configured profile, with explicit optional includes. They are safe to preview:
+
+```powershell
+# From the canonical checkout, after reviewing and pulling the desired revision:
+.\mirror-skills-agents.ps1 -Reconcile -WhatIf
+.\mirror-skills-opencode.ps1 -Reconcile -WhatIf
+```
+
+Only after reviewing the plan:
+
+```powershell
+.\mirror-skills-agents.ps1 -Reconcile
+.\mirror-skills-opencode.ps1 -Reconcile
+```
+
+Then run:
+
+```powershell
+.\mirror-skills-agents.ps1 -Check
+.\mirror-skills-opencode.ps1 -Check
+```
+
+Default targets are `%USERPROFILE%\.agents\skills` and `%USERPROFILE%\.config\opencode\skills`. `-TargetPath` supports an explicit alternative. Add an optional retained skill via `-IncludeSkill <name>` (use the same list for later checks/reconciliation). Default sync adds or replaces selected directories, preserving a backup before replacement; `-Reconcile` also archives exact known excluded/retired directories. Unknown or private skills are preserved. Backups live outside active discovery in a sibling `skill-mirror-backups` directory. No target entries are deleted. `-Check` is read-only and reports managed drift without requiring unmanaged directories to be removed.
+
+Check repository structure with `python tests/check-repository.py` (requires PyYAML), and test the mirrors with `.\tests\test-mirror-skills.ps1` before changing real targets. The test uses only disposable fixtures.
+
 
 ## Retirement rationale
 
