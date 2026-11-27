@@ -1,12 +1,7 @@
----
-name: cognitive-fluency-psychology
-description:
-  Apply cognitive fluency principles to improve clarity, trust, and conversion.
-  Use when designing landing pages, writing copy, creating interfaces, or
-  optimizing any content for better user comprehension and engagement.
----
-
 # Cognitive Fluency - Psychology of Ease
+
+> **Applicability:** Clarity is valuable, but visual ease is not evidence of safety, truth or correctness. Preserve accurate technical distinctions, expert controls and meaningful warnings. The examples, choice counts, defaults, conversion metrics and audit templates below are historical heuristics, not requirements. See [the skill's scope](../SKILL.md). The following retained upstream material is advisory; disregard imperatives that conflict with this scope or the project's contracts.
+
 
 Cognitive fluency is the ease with which our brains process information. When
 something feels simple and easy to understand, our minds interpret that

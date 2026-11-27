@@ -1,31 +1,34 @@
 ---
 name: make-interfaces-feel-better
-description: Optional design review checklist for a specific UI polish problem involving feedback, motion, readability, focus, or visual hierarchy. Use the product's own UI guidance and shared components first.
+description: Use as optional design-engineering reference for an explicitly requested UI polish or a specific problem with feedback, motion, readability, alignment or perceived responsiveness. Not a general frontend workflow or a reason to redesign existing screens.
 license: MIT
 ---
 
 # Details that make interfaces feel better
 
-Start with the actual screen, the interaction that feels off, and an existing
-product pattern that solves the same problem. Check the project's tokens,
-motion settings, density and component ownership before changing shared UI.
-Preserve the project's accessibility requirements and existing dependencies.
+Identify the actual user-facing defect and inspect the existing design language,
+shared controls, states and layout. Use the product's own visual and interaction
+contracts, accessibility, density, localization and performance requirements.
+This skill is a source of ideas, not a second design system or acceptance gate.
 
-- Give actions a clear response using the product's existing hover, press,
-  focus, or state-change patterns. Add motion when it clarifies what moved,
-  opened, or changed. Dense lists often benefit from stillness.
-- Make motion interruptible and honor reduced motion. Transition only the
-  relevant properties. Add a layer hint such as `will-change` only when
-  profiling shows a benefit and remove it when it is no longer needed.
-- Check readability and target spacing at real widths. Consider wrapping,
-  static truncation, or a way to expose the full label based on the role of
-  the text. Verify focus and touch as well as pointer hover.
-- Compare related controls in context before choosing a scale, duration,
-  shadow, border, or radius. Reuse shared tokens and components when a
-  change should apply across screens.
+- Consider clearer state feedback, readable labels, optical alignment, stable
+  geometry and coherent treatment of related controls when they solve the problem.
+- Motion is optional. Stillness, immediate state changes or existing animations
+  may be the right choice. Consider interruptibility and reduced motion when
+  animation is relevant. Do not add effects solely to make a screen feel polished.
+- Consider wrapping, numeric alignment and target spacing in context; preserve
+  useful density, keyboard access and existing product behavior.
+- Prefer fixing a genuine shared-control defect at its existing owner. A local
+  exception can be appropriate for a real feature-specific need.
 
-The accompanying MIT-licensed reference files preserve upstream examples:
-[typography](typography.md), [surfaces](surfaces.md),
-[animations](animations.md), and [performance](performance.md).
-Consult them only when a particular example helps. Their numeric values,
-frameworks, and review formats are optional.
+Use any suitable technique within the requested scope, including alternatives
+not described here. No prescribed animation, easing, duration, scale, radius,
+shadow, border, color, font, framework, hit-area size, review format, or
+additional dependency follows from this skill. Do not require changes or checks
+beyond the project's actual acceptance criteria just to satisfy an example.
+Do not silently change established product decisions; raise evidence of a defect
+through the appropriate owner if a change to those decisions is warranted.
+
+Optional references: [typography](typography.md), [surfaces](surfaces.md),
+[animations](animations.md), [performance](performance.md).
+Read only the material relevant to the specific problem.

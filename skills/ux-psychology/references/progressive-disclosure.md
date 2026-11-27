@@ -1,12 +1,7 @@
----
-name: progressive-disclosure
-description:
-  Reduce complexity by revealing information progressively. Use when designing
-  onboarding, complex forms, feature-rich interfaces, or any experience where
-  showing everything at once would overwhelm users.
----
-
 # Progressive Disclosure - Show the Right Thing at the Right Time
+
+> **Applicability:** Progressive disclosure is optional. The original 80/20 rule, frequency matrix, disclosure levels and examples below are historical heuristics, not a mandate. Never bury controls solely because they are advanced or rarely used; keep meaningful state, permission/consent, risk, errors, recovery and expert shortcuts discoverable and efficient. Do not gate features by usage or treat hover as the only path to essential actions. See [the skill's scope](../SKILL.md). The following retained upstream material is advisory; disregard imperatives that conflict with this scope or the project's contracts.
+
 
 Progressive Disclosure is an interaction design technique that sequences
 information and actions across time, showing users only what they need when they
@@ -36,13 +31,12 @@ Level 1: Important (one click away)
 Level 2: Useful (accessible but hidden)
     |
     v
-Level 3: Advanced (buried intentionally)
+Level 3: Advanced (directly discoverable when appropriate)
 ```
 
 ### 80/20 Rule Applied
 
-80% of users need 20% of features. Show that 20% prominently, progressively
-reveal the rest.
+Usage distribution varies by audience and task. Prioritize frequent and consequential work without concealing expert capabilities.
 
 ```
 +------------------------------------------+
@@ -71,7 +65,7 @@ reveal the rest.
 | **Hover to reveal**  | Tooltip/popover      | Help text on hover    |
 | **Scroll to reveal** | Below the fold       | Long-form content     |
 | **Time-based**       | Delayed introduction | Feature announcements |
-| **Skill-based**      | Unlock with usage    | Advanced features     |
+| **Skill-based**      | Optional guidance    | Expert shortcuts      |
 | **Role-based**       | Permission levels    | Admin controls        |
 
 ## Analysis Framework
@@ -97,8 +91,8 @@ List all elements users see:
     |                |  relevant      |
 FREQUENCY           |                NEED
     |                |                |
-    |  ACCESSIBLE    |  HIDE          |
-    |  One click     |  Deep menus    |
+    |  ACCESSIBLE    |  REVIEW NEED   |
+    |  Direct access |  Findable      |
     |  away          |                |
     +----------------+----------------+
                      |

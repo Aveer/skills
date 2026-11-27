@@ -13,4 +13,6 @@ Locally authored routing entry point; retained references are third-party materi
 - `references/hicks-law.md`: [historical skill](https://github.com/flpbalada/my-opencode-config/blob/6b42487d6121ae8f69df1924e4fefc9040e610b4/skills/hicks-law/SKILL.md), [MIT license](https://github.com/flpbalada/my-opencode-config/blob/6b42487d6121ae8f69df1924e4fefc9040e610b4/LICENSE), copyright 2025 Filip Balada. Historical content matched or traced to the licensed source.
 - `references/progressive-disclosure.md`: [historical skill](https://github.com/flpbalada/my-opencode-config/blob/6b42487d6121ae8f69df1924e4fefc9040e610b4/skills/progressive-disclosure/SKILL.md), [MIT license](https://github.com/flpbalada/my-opencode-config/blob/6b42487d6121ae8f69df1924e4fefc9040e610b4/LICENSE), copyright 2025 Filip Balada. Historical content matched or traced to the licensed source.
 
+2026-11-27 adaptation: Entry point and retained references scoped to user-centered usability, expert discoverability, explicit choice, accurate feedback and product-owned decisions. Original heuristics remain advisory; reference-level licenses are preserved.
+
 This records source attribution, not a claim of unchanged upstream content. Keep this notice and the applicable LICENSE files with distributed copies.

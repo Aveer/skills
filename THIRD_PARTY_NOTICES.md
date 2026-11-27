@@ -10,7 +10,6 @@ Historical source anchors were recovered from source trees and import history. E
 | `author-voice` | MIT | Copyright (c) 2026 Aveer | [source and notes](skills/author-voice/PROVENANCE.md) |
 | `behavioral-design` | MIT (multiple notices) | Aveer (wrapper); Filip Balada (references) | [source and notes](skills/behavioral-design/PROVENANCE.md) |
 | `code-architecture-tailwind-v4-best-practices` | MIT | Copyright (c) 2025 Filip Balada | [source and notes](skills/code-architecture-tailwind-v4-best-practices/PROVENANCE.md) |
-| `code-architecture-wrong-abstraction` | MIT | Copyright (c) 2025 Filip Balada | [source and notes](skills/code-architecture-wrong-abstraction/PROVENANCE.md) |
 | `css-container-queries` | MIT | Copyright (c) 2025 Filip Balada | [source and notes](skills/css-container-queries/PROVENANCE.md) |
 | `customer-research` | MIT | Copyright (c) 2025 Corey Haines | [source and notes](skills/customer-research/PROVENANCE.md) |
 | `jobs-to-be-done` | MIT | Copyright (c) 2025 Filip Balada | [source and notes](skills/jobs-to-be-done/PROVENANCE.md) |
@@ -27,11 +26,9 @@ Historical source anchors were recovered from source trees and import history. E
 | `tsdown` | MIT | Copyright (c) 2025-PRESENT Anthony Fu | [source and notes](skills/tsdown/PROVENANCE.md) |
 | `typescript-best-practices` | MIT (multiple notices) | Filip Balada; local wrapper | [source and notes](skills/typescript-best-practices/PROVENANCE.md) |
 | `ux-psychology` | MIT (multiple notices) | Aveer (wrapper); Filip Balada (references) | [source and notes](skills/ux-psychology/PROVENANCE.md) |
-| `verification-planning` | MIT | Upstream notice: Copyright (c) 2025 (holder not specified) | [source and notes](skills/verification-planning/PROVENANCE.md) |
 | `vite` | MIT | Copyright (c) 2025-PRESENT Anthony Fu | [source and notes](skills/vite/PROVENANCE.md) |
 | `vitest` | MIT | Copyright (c) 2025-PRESENT Anthony Fu | [source and notes](skills/vitest/PROVENANCE.md) |
 | `vue` | MIT | onmax (existing local attribution; upstream declares MIT) | [source and notes](skills/vue/PROVENANCE.md) |
-| `web-perf` | MIT | Copyright (c) 2026 Aveer | [source and notes](skills/web-perf/PROVENANCE.md) |
 | `writing-web-documentation` | MIT | onmax (existing local attribution; upstream declares MIT) | [source and notes](skills/writing-web-documentation/PROVENANCE.md) |
 
 ## Retired imports

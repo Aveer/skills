@@ -2,28 +2,22 @@
   "schemaVersion": 1,
   "profiles": {
     "agents": [
-      "code-architecture-wrong-abstraction",
       "make-interfaces-feel-better",
-      "repository-docs-governance",
-      "systematic-debugging",
-      "ux-psychology",
-      "verification-planning",
-      "web-perf"
-    ],
-    "opencode": [
-      "code-architecture-wrong-abstraction",
-      "css-container-queries",
-      "make-interfaces-feel-better",
-      "pnpm",
-      "repository-docs-governance",
       "systematic-debugging",
       "typescript-best-practices",
       "ux-psychology",
-      "verification-planning",
       "vite",
       "vitest",
-      "vue",
-      "web-perf"
+      "vue"
+    ],
+    "opencode": [
+      "make-interfaces-feel-better",
+      "systematic-debugging",
+      "typescript-best-practices",
+      "ux-psychology",
+      "vite",
+      "vitest",
+      "vue"
     ]
   },
   "optional": [
@@ -31,30 +25,34 @@
     "author-voice",
     "behavioral-design",
     "code-architecture-tailwind-v4-best-practices",
+    "css-container-queries",
     "customer-research",
     "jobs-to-be-done",
     "marketing-psychology",
     "media-recommender",
     "motion",
     "nuxt",
+    "pnpm",
     "release-smoke-test",
+    "repository-docs-governance",
     "ts-library",
     "tsdown",
     "writing-web-documentation"
   ],
   "nexusCandidates": [
-    "code-architecture-wrong-abstraction",
     "make-interfaces-feel-better",
-    "repository-docs-governance",
     "systematic-debugging",
+    "typescript-best-practices",
     "ux-psychology",
-    "verification-planning",
-    "web-perf"
+    "vite",
+    "vitest",
+    "vue"
   ],
   "retired": [
     "business-model-canvas",
     "ce-brainstorm",
     "clonedeps",
+    "code-architecture-wrong-abstraction",
     "codemap",
     "cognitive-biases",
     "cognitive-fluency-psychology",
@@ -94,8 +92,10 @@
     "typescript-satisfies-operator",
     "user-story-fundamentals",
     "verification-before-completion",
+    "verification-planning",
     "video",
     "visual-cues-cta-psychology",
+    "web-perf",
     "worktrees"
   ],
   "repoOnly": [

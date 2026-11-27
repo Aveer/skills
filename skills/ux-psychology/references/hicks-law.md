@@ -1,12 +1,7 @@
----
-name: hicks-law
-description:
-  Optimize decision-making speed by managing choice quantity. Use when designing
-  navigation, menus, feature sets, onboarding flows, or any interface where
-  users must choose between options.
----
-
 # Hick's Law - Less Choice, Faster Decisions
+
+> **Applicability:** Hick-Hyman describes controlled choice-response situations, not a universal optimal number of UI options. Real navigation depends on familiarity, search, grouping and task context. The formula, sample timings, chart, counts and conversion estimates below are illustrative, not product evidence. Do not remove or hide advanced capabilities, impose an arbitrary option limit, preselect consequential choices, or prioritize popularity merely to reduce choice count. See [the skill's scope](../SKILL.md). The following retained upstream material is advisory; disregard imperatives that conflict with this scope or the project's contracts.
+
 
 Hick's Law (also Hick-Hyman Law) states that the time it takes to make a
 decision increases logarithmically with the number and complexity of choices.
@@ -88,8 +83,8 @@ Essential (keep)     Nice-to-have (maybe)     Remove
 ### Step 3: Apply Reduction Strategies
 
 1. **Chunking**: Group related items (3-4 per group)
-2. **Progressive disclosure**: Hide advanced options
-3. **Smart defaults**: Pre-select the common choice
+2. **Progressive disclosure**: Consider grouping secondary detail when expert access and discoverability remain efficient
+3. **Defaults**: Use only existing or explicitly approved appropriate defaults; preserve meaningful choice
 4. **Filtering**: Let users narrow options
 5. **Recommendations**: Highlight "Most Popular"
 
@@ -167,7 +162,7 @@ Redesigned: 3 essential questions, rest defaulted
 
 ### Do
 
-- Aim for 5-7 options maximum in any grouping
+- Consider grouping when it demonstrably improves comprehension; there is no fixed maximum
 - Use categorization to chunk larger sets
 - Provide clear visual hierarchy
 - Make the "default" choice obvious
@@ -176,7 +171,7 @@ Redesigned: 3 essential questions, rest defaulted
 ### Avoid
 
 - Showing all features at once
-- Flat menus with 10+ items
+- Flat menus that demonstrably hinder finding the desired action
 - Requiring decisions without clear benefit
 - Equal visual weight for all options
 - Removing options users actively need

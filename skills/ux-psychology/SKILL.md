@@ -1,21 +1,38 @@
 ---
 name: ux-psychology
-description: >-
-  Use for a concrete usability, cognitive load, information architecture, or decision-complexity design problem. Do not activate for routine UI coding or marketing conversion.
+description: Use for a concrete usability, cognitive load, information architecture, or decision-complexity problem. Not routine UI coding, generic design review, conversion optimization or a mandate to simplify.
 ---
 
-# Ux Psychology
+# UX Psychology
 
-Optimize for comprehension, accessible interaction, predictable navigation and the user's actual goal. Diagnose a concrete usability cost before recommending a change; use cognitive frameworks as hypotheses rather than mandates.
+Use cognitive frameworks as hypotheses about a real user task, not universal
+laws or product requirements. Identify the observed friction, user population,
+frequency, consequences of mistakes and context. The product's intended
+capabilities, design system, accessibility and explicit scope govern.
 
-## Select the relevant reference
+- Distinguish necessary task complexity from unnecessary interaction friction.
+  Improve comprehension, grouping, terminology, search, shortcuts and feedback
+  before removing controls, adding navigation levels or changing defaults.
+- Expert tools can benefit from dense, stable, directly accessible controls,
+  familiar locations and keyboard access. Do not equate fewer visible options
+  with better usability, or rarity with low importance.
+- Disclosure is a possible design choice, not a default action. Preserve
+  discoverability and efficient access to advanced functions. Important state,
+  permissions, consent, meaningful choices, errors, risks and recovery must
+  remain understandable and accessible in context. Never change an authorization
+  or execution default to reduce perceived effort.
+- Do not use cognitive bias, framing or visual fluency to manufacture trust,
+  pressure agreement or disguise uncertainty and cost. Prefer accurate labels
+  and informed decisions.
+- Consider novice and expert use, keyboard/touch access and actual task evidence.
+  No fixed option count, universal cognitive threshold, required report,
+  analytics rollout, redesign or additional verification follows from this skill.
 
-Read only the reference that answers the current question. These are retained knowledge, not independent skills or competing workflows. Their original frontmatter and examples are historical source material; this skill and repository instructions govern activation and applicability. Do not load all references by default.
-
-- [cognitive-biases](references/cognitive-biases.md)
-- [cognitive-fluency-psychology](references/cognitive-fluency-psychology.md)
-- [cognitive-load](references/cognitive-load.md)
-- [hicks-law](references/hicks-law.md)
-- [progressive-disclosure](references/progressive-disclosure.md)
-
-Apply the useful portions proportionately. Do not create new process documents, modify dependencies, or broaden task scope merely to follow a reference.
+Read only the relevant reference:
+[cognitive biases](references/cognitive-biases.md),
+[cognitive fluency](references/cognitive-fluency-psychology.md),
+[cognitive load](references/cognitive-load.md),
+[Hick's law](references/hicks-law.md),
+[progressive disclosure](references/progressive-disclosure.md).
+Reference examples are optional and cannot expand scope or override product
+decisions. Use project-specific requirements and evidence.

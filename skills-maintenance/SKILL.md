@@ -5,13 +5,13 @@ description: Maintain Aveer/skills, its provenance and distribution policy. Use 
 
 # Skills Maintenance
 
-This repo is the canonical public library. Keep a skill only if its specialized knowledge or method materially improves work. Prefer native host facilities and project-owned contracts over duplicated general workflows. Do not mirror the repo-only maintenance skill or package private personal context.
+This repo is the canonical public library. Keep a skill only if its specialized knowledge or method materially improves work. Prefer native host facilities and project-owned contracts over duplicated general workflows. Make useful technology knowledge available across coding hosts; do not infer which host implements versus reviews. Activation depends on the concrete task and installed technologies, not the host. Do not mirror the repo-only maintenance skill or package private personal context.
 
 ## 1. Curate and attribute
 
 - Read the existing skill, its supporting files, actual source/authority, upstream license and version or historical source anchor. For a new import, inspect the exact source before copying; record the revision, path, copyright and license in `PROVENANCE.md`. Preserve all applicable upstream licenses and notices with the files, including reference-level notices when consolidating. If permission is unresolved, do not distribute a new import. For an existing ambiguous copy, report and resolve the uncertainty; do not guess or silently change its license.
 - Original repository material uses the root MIT convention. A local wrapper does not relicense third-party references. Mark adaptations and scope them to the current host and installed versions. Prefer a focused trigger and on-demand references; don't chain-load irrelevant skills.
-- Maintain `skills-policy.json`: agents = shared local ChatGPT/Codex selection; opencode = shared plus local coding references; optional = retained on-demand skills; nexusCandidates = relevant subset of agents; retired = exact historical names eligible for explicit local archival; repoOnly = maintenance skill. Keep README and THIRD_PARTY_NOTICES in sync.
+- Maintain `skills-policy.json`: agents = shared local ChatGPT/Codex selection; opencode = the same defaults unless an actual host-specific requirement warrants a difference; optional = retained on-demand skills; nexusCandidates = advisory relevant subset of agents (not a deployment destination); retired = exact historical names eligible for explicit local archival; repoOnly = maintenance skill. Keep README and THIRD_PARTY_NOTICES in sync.
 - Check for existing personal-context or project consumers and OMO bundled equivalents before retiring or renaming. Update explicit references to retired names; don't duplicate project-specific governance in global skills.
 
 ## 2. Validate and publish
