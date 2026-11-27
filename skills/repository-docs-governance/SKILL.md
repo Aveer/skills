@@ -48,6 +48,10 @@ Read enough context to identify authoritative homes before proposing changes:
 5. Project-local skills and relevant OpenCode configuration or ignore rules.
 6. Version-control status so unrelated work is preserved.
 
+For an installed or mirrored skill, identify its maintained source before editing.
+Update that source and use its existing deployment mechanism for only the intended
+skill; avoid unrelated synchronization or overwriting local additions.
+
 Measure root instruction lines/words and the effective context for representative
 subtrees. A compact root can still be costly when large nested guides stack with
 it.
@@ -124,8 +128,16 @@ For a periodic refresh, compare documentation claims against current evidence:
 - README summaries versus authoritative indexes.
 
 Update only facts supported by current code, configuration, tests, or accepted
-records. Do not promote archived documents back to authority or silently change
-product behavior through a documentation refresh.
+records. Reconcile a current guide's summary, activation limits and examples with
+later checkpoints; appending new evidence does not resolve an earlier conflicting
+claim. Keep one current explanation and clearly dated, linked historical evidence.
+Distinguish an implemented library/adapter seam from installed transport, lifecycle,
+product-flow and platform acceptance. Reuse exact-input evidence when unchanged.
+
+A completed substep does not make its whole active plan historical. Preserve
+provenance and required evidence links before removing duplicate material. Do not
+promote archived documents back to authority or silently change product behavior
+through a documentation refresh.
 
 ## 6. Verify The Governance Contract
 
