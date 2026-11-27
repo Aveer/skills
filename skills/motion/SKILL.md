@@ -1,8 +1,14 @@
 ---
 name: motion
-description: Use when adding animations with Motion Vue (motion-v) - provides motion component API, gesture animations, scroll-linked effects, layout transitions, and composables for Vue 3/Nuxt
+description: >-
+  Use only when the project actually uses Motion Vue (motion-v), or the user explicitly wants to evaluate or adopt it for a concrete animation. Do not install it for routine UI polish.
 license: MIT
 ---
+
+## Applicability
+
+Repository instructions, accepted contracts, installed versions and existing project conventions govern. Apply these examples only within the activation scope above. Do not add dependencies or change architecture solely to follow this reference.
+
 
 # Motion Vue (motion-v)
 

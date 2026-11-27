@@ -114,22 +114,22 @@ remove the folder from each deployment target.
 | [image](skills/image) | Create, generate, edit, and optimize marketing images with AI tools. |
 | [jobs-to-be-done](skills/jobs-to-be-done) | Understand customer motivations through jobs-to-be-done theory. |
 | [loop-engineering](skills/loop-engineering) | Use only when explicitly requesting a bounded loop in a compatible Oh My OpenCode Slim Grill/Monitor runtime with the required loop API. Not for ordinary iterative implementation or verification. |
-| [make-interfaces-feel-better](skills/make-interfaces-feel-better) | Design engineering principles for making interfaces feel polished. |
+| [make-interfaces-feel-better](skills/make-interfaces-feel-better) | Use for explicit UI polish or a concrete interaction/visual defect within the authorized frontend scope. Existing design system, accessibility, reduced-motion and product requirements take precedence. |
 | [making-product-decisions](skills/making-product-decisions) | Use for material unresolved product trade-offs requiring a structured decision. Do not reopen accepted decisions or require a fixed number of alternatives. |
 | [marketing-psychology](skills/marketing-psychology) | Use for explicit marketing, conversion research, ethical persuasion, trust signals, or campaign messaging. Do not activate for ordinary product UI, coding, or general decision-making. |
 | [media-recommender](skills/media-recommender) | Build and apply profile-driven cross-media recommendations while separating personal fit, execution confidence, and medium/platform path. |
-| [motion](skills/motion) | Animations with Motion Vue (motion-v) for Vue 3/Nuxt. |
+| [motion](skills/motion) | Use only when the project actually uses Motion Vue (motion-v), or the user explicitly wants to evaluate or adopt it for a concrete animation. Do not install it for routine UI polish. |
 | [naming-cheatsheet](skills/naming-cheatsheet) | Language-agnostic naming conventions using the A/HC/LC pattern. |
-| [nextjs-image-art-direction](skills/nextjs-image-art-direction) | Art direction for Next.js images with `getImageProps()` (per-viewport images). |
-| [nuxt](skills/nuxt) | Nuxt 4+ patterns: server routes, file-based routing, middleware, h3 v1, nitropack v2. |
+| [nextjs-image-art-direction](skills/nextjs-image-art-direction) | Use only for Next.js image art direction when different viewports genuinely need different assets or crops and the installed API supports it. |
+| [nuxt](skills/nuxt) | Use only for an actual Nuxt project and a Nuxt-specific server, routing, rendering, composable or configuration problem; not ordinary Vue or generic SSR. |
 | [oh-my-opencode-slim](skills/oh-my-opencode-slim) | Configure and improve oh-my-opencode-slim (agents, models, prompts, skills, MCPs, presets). |
 | [pest-analysis](skills/pest-analysis) | PEST (Political, Economic, Social, Technological) analysis for strategic planning. |
 | [pnpm](skills/pnpm) | Manage Node.js dependencies with pnpm: workspaces, catalogs, overrides, patches, CI. |
-| [project-structure](skills/project-structure) | React/Next.js/TypeScript project organization using feature-based architecture. |
-| [react-key-prop](skills/react-key-prop) | Proper usage of the `key` prop in React lists. |
-| [react-use-callback](skills/react-use-callback) | Proper usage of the `useCallback` hook in React. |
-| [react-use-client-boundary](skills/react-use-client-boundary) | Proper usage of the `"use client"` directive in React/Next.js. |
-| [react-use-state](skills/react-use-state) | Proper usage of the React `useState` hook. |
+| [project-structure](skills/project-structure) | Use only for a React or Next.js project whose architecture or file organization genuinely needs design or reorganization. Never impose this React-specific structure on Vue, other frameworks, or an accepted repository architecture. |
+| [react-key-prop](skills/react-key-prop) | Use only for React list identity or reconciliation bugs, or non-trivial React key selection; not Vue lists or routine rendering. |
+| [react-use-callback](skills/react-use-callback) | Use only for a React callback identity or measured rendering performance problem where useCallback is relevant. Do not activate for Vue or routine callback creation. |
+| [react-use-client-boundary](skills/react-use-client-boundary) | Use only for React Server Components or Next.js App Router client-server boundary decisions and related errors. |
+| [react-use-state](skills/react-use-state) | Use only for a non-trivial React useState or state ownership problem. Not for other frameworks or routine React component edits. |
 | [reflect](skills/reflect) | Review recent work, find repeated workflow patterns, suggest reusable skills, agents, and playbooks. |
 | [release-smoke-test](skills/release-smoke-test) | Test an oh-my-opencode-slim release candidate or bugfix before publishing. |
 | [repository-docs-governance](skills/repository-docs-governance) | Audit and restructure a repository's AGENTS.md hierarchy, codemaps, and documentation. |

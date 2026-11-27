@@ -1,7 +1,13 @@
 ---
 name: react-use-state
-description: Guides proper usage of React useState hook. Use this skill when adding state to components, deciding between useState vs alternatives, or troubleshooting state update issues.
+description: >-
+  Use only for a non-trivial React useState or state ownership problem. Not for other frameworks or routine React component edits.
 ---
+
+## Applicability
+
+Repository instructions, accepted contracts, installed versions and existing project conventions govern. Apply these examples only within the activation scope above. Do not add dependencies or change architecture solely to follow this reference.
+
 
 # React: useState Hook Best Practices
 

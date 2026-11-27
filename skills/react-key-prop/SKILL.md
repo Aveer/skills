@@ -1,7 +1,13 @@
 ---
 name: react-key-prop
-description: Guides proper usage of the key prop in React lists. Use this skill when rendering lists, mapping arrays to components, or troubleshooting list-related state bugs.
+description: >-
+  Use only for React list identity or reconciliation bugs, or non-trivial React key selection; not Vue lists or routine rendering.
 ---
+
+## Applicability
+
+Repository instructions, accepted contracts, installed versions and existing project conventions govern. Apply these examples only within the activation scope above. Do not add dependencies or change architecture solely to follow this reference.
+
 
 # React: Key Prop Best Practices
 

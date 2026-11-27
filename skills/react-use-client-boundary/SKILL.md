@@ -1,10 +1,13 @@
 ---
 name: react-use-client-boundary
-description:
-  Guides proper usage of "use client" directive in React/Next.js. Use this skill
-  when adding client components, troubleshooting Server Component errors, or
-  deciding where to place the client boundary.
+description: >-
+  Use only for React Server Components or Next.js App Router client-server boundary decisions and related errors.
 ---
+
+## Applicability
+
+Repository instructions, accepted contracts, installed versions and existing project conventions govern. Apply these examples only within the activation scope above. Do not add dependencies or change architecture solely to follow this reference.
+
 
 # React "use client" Directive & Client Boundaries
 

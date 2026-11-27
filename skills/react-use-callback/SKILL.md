@@ -1,7 +1,13 @@
 ---
 name: react-use-callback
-description: Guides proper usage of the useCallback hook in React. Use this skill when optimizing function references, passing callbacks to memoized components, or preventing unnecessary re-renders.
+description: >-
+  Use only for a React callback identity or measured rendering performance problem where useCallback is relevant. Do not activate for Vue or routine callback creation.
 ---
+
+## Applicability
+
+Repository instructions, accepted contracts, installed versions and existing project conventions govern. Apply these examples only within the activation scope above. Do not add dependencies or change architecture solely to follow this reference.
+
 
 # React: useCallback Best Practices
 
