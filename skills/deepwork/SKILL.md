@@ -1,6 +1,7 @@
 ---
 name: deepwork
-description: High-cost orchestrator workflow for large, high-risk, multi-phase coding efforts with meaningful dependencies and review gates. Do not activate for routine multi-file changes.
+description: >-
+  Use only in an active Oh My OpenCode Slim orchestrator for large, high-risk dependent work that lacks an existing project-owned execution plan. Do not activate for Nexus foundation work, routine changes, or generic ChatGPT/Codex orchestration.
 ---
 
 # Deepwork
@@ -16,9 +17,7 @@ features.
 
 ## Project Precedence
 
-The Orchestrator may autonomously activate Deepwork whenever the trigger threshold
-above is met. Activation may create `.slim/deepwork/` state and add its required
-ignore entries without separate confirmation.
+Activate only within a compatible OMO orchestrator when the task genuinely needs this workflow and the project's own plan, qualification and tracking do not already provide it. Never create `.slim/deepwork/` or ignore entries for work with existing authoritative phase ownership; do not invoke unavailable specialists.
 
 Repository instructions, accepted specifications, and the project's tracker
 remain authoritative for product scope and persistent issue state. The Deepwork
@@ -54,8 +53,7 @@ Required behavior:
 - before each implementation phase, decide the execution path: what can run in
   parallel, what must be sequential, which specialists to delegate to, and
   whether to split the same agent into multiple bounded lanes;
-- after each planned phase, validate and update the deepwork file, then ask
-  `@oracle` to review the phase result before continuing;
+- after each planned phase, validate and update the deepwork file; request `@oracle` only at a justified planned independent-review gate, and only if available;
 - before an Oracle review, add relevant confirmed research findings and file
   references to the deepwork file so Oracle can assess the decision or risk from
   accepted context instead of redoing discovery;
@@ -70,7 +68,7 @@ Required behavior:
 
 ## Planned Phase Reviews
 
-Oracle reviews are automatic gates between the planned implementation phases.
+Oracle reviews are gates only where the planned risk and accepted project requirements justify independent review; reuse valid review evidence and omit redundant gates.
 Before dispatch, decide the phases from the task itself: its dependencies,
 integration boundaries, and meaningful delivery points. Record the phase order,
 the total review count, the review after each phase, and a short reason for each

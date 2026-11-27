@@ -1,10 +1,15 @@
 ---
 name: ce-brainstorm
-description: 'Explore vague or ambitious ideas into a right-sized requirements-only unified plan. Use when the user wants to brainstorm, think through scope, decide what to build, or needs collaborative product framing before planning. Also use when the user must scope work in territory they say they do not know ("I know nothing about X but need to...") or asks for a blindspot pass — mapping the decision surface before questions begin. Not for executing already-specified work — direct implementation, debugging, or code review where no product scope is left to decide. Not for a decisive verdict on whether to adopt or switch to a specific external technology, library, or platform — brainstorming scopes what to build, not whether to commit to an outside option.'
+description: >-
+  Use only when the user explicitly requests ce-brainstorm or collaborative requirements exploration for a genuinely unresolved product decision. Never use for accepted specifications, implementation, or a technology verdict.
 argument-hint: "[feature idea or problem to explore] [output:html]"
 ---
 
 # Brainstorm a Feature or Improvement
+
+## Activation and project authority
+
+Use this substantial Compound Engineering workflow only when the user explicitly requests it for unresolved product framing. Do not run it as a prerequisite for implementation, a specification audit, or a technology selection. Existing project specifications and artifact ownership override its plan location and format. Ask only questions that materially block a decision; do not repeat answered questions. References to ce-plan, ce-pov, subagents, caches, or special question tools are optional and require actual availability; do not invent or install them. If unavailable, use a concise inline brief or the existing project owner instead. All following workflow rules are subordinate to this scope and repository policy.
 
 **Note: The current year is 2026.** Use this when dating requirements-only unified plans.
 

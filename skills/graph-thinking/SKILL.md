@@ -1,12 +1,12 @@
 ---
 name: graph-thinking
-description:
-  Apply graph-based thinking to visualize complex relationships and solve
-  problems non-linearly. Use when mapping dependencies, analyzing systems,
-  exploring interconnected concepts, or designing architectures.
+description: >-
+  Use when explicit dependency or relationship mapping materially helps solve a complex problem. Do not activate for every architectural or code task.
 ---
 
 # Graph Thinking - Non-Linear Problem Solving
+
+Use as an optional analytical technique only when it improves the specific task. Existing project procedures and accepted decisions take precedence; do not require a separate artifact or repeat analysis already established by evidence.
 
 Mental model for visualizing complex relationships and connections between
 ideas, concepts, or data points. Evolved from Graph-of-Thought (GoT) reasoning

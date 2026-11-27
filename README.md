@@ -99,23 +99,23 @@ remove the folder from each deployment target.
 | [author-voice](skills/author-voice) | Build, calibrate, and apply a reusable author voice profile so editing and drafting preserve a specific writer's identity without imitating accidental typos. |
 | [behavioral-design](skills/behavioral-design) | Use when the user explicitly requests behavior change, habit formation, adoption, or retention design. Do not activate merely because onboarding, notifications, or migration are mentioned. |
 | [business-model-canvas](skills/business-model-canvas) | Design and analyze business models using the Business Model Canvas framework. |
-| [ce-brainstorm](skills/ce-brainstorm) | Explore vague or ambitious ideas into a right-sized, requirements-only plan before building. |
+| [ce-brainstorm](skills/ce-brainstorm) | Use only when the user explicitly requests ce-brainstorm or collaborative requirements exploration for a genuinely unresolved product decision. Never use for accepted specifications, implementation, or a technology verdict. |
 | [clonedeps](skills/clonedeps) | Clone dependency source code into a local workspace so agents can inspect library internals. |
 | [code-architecture-tailwind-v4-best-practices](skills/code-architecture-tailwind-v4-best-practices) | Tailwind CSS v4 patterns for buttons and components (CVA/tailwind-variants, CSS-first config). |
 | [code-architecture-wrong-abstraction](skills/code-architecture-wrong-abstraction) | When to abstract vs. duplicate code; DRY/WET decisions and refactoring abstractions. |
 | [codemap](skills/codemap) | Generate comprehensive hierarchical codemaps for unfamiliar repositories. |
 | [css-container-queries](skills/css-container-queries) | CSS container queries for component-based responsive design. |
 | [customer-research](skills/customer-research) | Conduct, analyze, and synthesize customer research (interviews, surveys, reviews, community mining). |
-| [deepwork](skills/deepwork) | High-cost orchestrator workflow for large, high-risk, multi-phase coding efforts. |
-| [find-skills](skills/find-skills) | Help users discover and install agent skills. |
-| [five-whys](skills/five-whys) | Root cause analysis using the Five Whys technique. |
-| [graph-thinking](skills/graph-thinking) | Graph-based thinking for mapping dependencies and solving problems non-linearly. |
-| [hypothesis-tree](skills/hypothesis-tree) | Structure complex questions into testable hypotheses. |
+| [deepwork](skills/deepwork) | Use only in an active Oh My OpenCode Slim orchestrator for large, high-risk dependent work that lacks an existing project-owned execution plan. Do not activate for Nexus foundation work, routine changes, or generic ChatGPT/Codex orchestration. |
+| [find-skills](skills/find-skills) | Use only when the user explicitly asks to discover, compare, install or manage agent skills. Not for ordinary how-to questions or work that existing capabilities can perform. |
+| [five-whys](skills/five-whys) | Use when a user explicitly requests Five Whys or a specific causal investigation benefits from that technique. Do not impose on routine bug fixes or every issue. |
+| [graph-thinking](skills/graph-thinking) | Use when explicit dependency or relationship mapping materially helps solve a complex problem. Do not activate for every architectural or code task. |
+| [hypothesis-tree](skills/hypothesis-tree) | Use when a genuinely uncertain research or diagnostic problem needs multiple competing, testable hypotheses. Do not activate for already established causes or routine decisions. |
 | [image](skills/image) | Create, generate, edit, and optimize marketing images with AI tools. |
 | [jobs-to-be-done](skills/jobs-to-be-done) | Understand customer motivations through jobs-to-be-done theory. |
-| [loop-engineering](skills/loop-engineering) | Loop engineering runtime: Grill + Monitor. |
+| [loop-engineering](skills/loop-engineering) | Use only when explicitly requesting a bounded loop in a compatible Oh My OpenCode Slim Grill/Monitor runtime with the required loop API. Not for ordinary iterative implementation or verification. |
 | [make-interfaces-feel-better](skills/make-interfaces-feel-better) | Design engineering principles for making interfaces feel polished. |
-| [making-product-decisions](skills/making-product-decisions) | Framework for structured product decision-making and tradeoff analysis. |
+| [making-product-decisions](skills/making-product-decisions) | Use for material unresolved product trade-offs requiring a structured decision. Do not reopen accepted decisions or require a fixed number of alternatives. |
 | [marketing-psychology](skills/marketing-psychology) | Use for explicit marketing, conversion research, ethical persuasion, trust signals, or campaign messaging. Do not activate for ordinary product UI, coding, or general decision-making. |
 | [media-recommender](skills/media-recommender) | Build and apply profile-driven cross-media recommendations while separating personal fit, execution confidence, and medium/platform path. |
 | [motion](skills/motion) | Animations with Motion Vue (motion-v) for Vue 3/Nuxt. |
@@ -133,21 +133,21 @@ remove the folder from each deployment target.
 | [reflect](skills/reflect) | Review recent work, find repeated workflow patterns, suggest reusable skills, agents, and playbooks. |
 | [release-smoke-test](skills/release-smoke-test) | Test an oh-my-opencode-slim release candidate or bugfix before publishing. |
 | [repository-docs-governance](skills/repository-docs-governance) | Audit and restructure a repository's AGENTS.md hierarchy, codemaps, and documentation. |
-| [simplify](skills/simplify) | Simplify and refine recently modified code for clarity and consistency. |
-| [systematic-debugging](skills/systematic-debugging) | Systematic debugging before proposing fixes for any bug or test failure. |
+| [simplify](skills/simplify) | Use only when the user requests simplification or the current authorized change has a concrete maintainability problem. Preserve behavior, scope and project contracts; do not initiate routine post-implementation refactoring. |
+| [systematic-debugging](skills/systematic-debugging) | Use for a concrete non-trivial defect, regression, or failure whose cause is uncertain. Diagnose from evidence and verify proportionately; do not impose a ritual on a clear mechanical correction. |
 | [theme-epic-story](skills/theme-epic-story) | Structure product work hierarchically using themes, epics, and stories. |
 | [ts-library](skills/ts-library) | Authoring TypeScript libraries: setup, exports, build tooling, API design, publishing. |
 | [tsdown](skills/tsdown) | Bundling TypeScript libraries with tsdown: dual ESM/CJS, `.d.ts`, validation. |
 | [typescript-best-practices](skills/typescript-best-practices) | Use for a material TypeScript typing, API, compiler configuration, or type-safety question requiring specialized guidance. Do not activate for routine TypeScript edits that follow established project conventions. |
 | [user-story-fundamentals](skills/user-story-fundamentals) | Capture requirements as structured user stories with acceptance criteria. |
 | [ux-psychology](skills/ux-psychology) | Use for a concrete usability, cognitive load, information architecture, or decision-complexity design problem. Do not activate for routine UI coding or marketing conversion. |
-| [verification-planning](skills/verification-planning) | Plan project-specific verification evidence for non-trivial coding work. |
+| [verification-planning](skills/verification-planning) | Use before non-trivial implementation when a credible project-specific evidence path is missing or must be reconciled. Reuse accepted acceptance contracts and applicable evidence; no duplicate verification plans. |
 | [video](skills/video) | Create, generate, and produce video content with AI tools or programmatic frameworks. |
 | [vite](skills/vite) | Version-aware Vite build, configuration, plugin, SSR, and migration guidance. |
 | [vitest](skills/vitest) | Unit/integration tests for Vite projects with vitest. |
 | [vue](skills/vue) | Vue 3 patterns: Composition API, props/emits, VueUse, reactive destructuring. |
 | [web-perf](skills/web-perf) | Diagnose and improve real-world web performance (Vue 3, Vite, Nuxt, Electron, Tauri). |
-| [worktrees](skills/worktrees) | Manage Git worktrees as isolated coding lanes for complex or parallel work. |
+| [worktrees](skills/worktrees) | Use when Git worktree isolation materially protects another active checkout or enables genuinely independent coding lanes. Use the repository's and harness's worktree policy first; never create extra lanes for routine work. |
 | [writing-web-documentation](skills/writing-web-documentation) | Write and organize developer-facing documentation for web software projects. |
 
 ## Consolidated skills

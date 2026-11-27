@@ -1,9 +1,12 @@
 ---
 name: loop-engineering
-description: Loop engineering runtime Grill + Monitor
+description: >-
+  Use only when explicitly requesting a bounded loop in a compatible Oh My OpenCode Slim Grill/Monitor runtime with the required loop API. Not for ordinary iterative implementation or verification.
 ---
 
 # Loop Engineering Skill
+
+Run this workflow only for an explicitly requested compatible runtime loop. Confirm the loop API and agent capabilities actually exist. If they do not, do not simulate callbacks or add a competing orchestration process. Reuse the supplied goal and success criteria rather than re-interviewing the user.
 
 ## Grill (orchestrator interview)
 

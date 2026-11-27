@@ -1,9 +1,12 @@
 ---
 name: verification-planning
-description: Verification planning for non-trivial coding work. Use before implementing a feature, bug fix, refactor, cross-system change, or high-confidence behavior change that needs a credible project-specific evidence path.
+description: >-
+  Use before non-trivial implementation when a credible project-specific evidence path is missing or must be reconciled. Reuse accepted acceptance contracts and applicable evidence; no duplicate verification plans.
 ---
 
 # Verification Planning
+
+When accepted specifications already define the required evidence path, use and reconcile that path instead of writing a new plan. Claim only what applicable evidence establishes. Distinguish patched, verified, qualified, accepted and integrated. A delegated exact-candidate qualification receipt or CI run can establish a claim after independent reconciliation; do not rerun solely because the chat or agent changed.
 
 ## Build an evidence path
 
@@ -68,8 +71,7 @@ its stakes, and any needed affordance has a defined lifecycle.
 ## 4. Research when the path is unknown
 
 When the right evidence path depends on an unfamiliar dependency, framework,
-external service, or rapidly changing capability, ask `@librarian` for focused
-research before committing to an approach.
+external service, or rapidly changing capability, use available official documentation, repository evidence or a focused research agent when justified before committing to an approach.
 
 Ask for official or project-specific facilities, constraints, and trade-offs
 that affect this exact verification problem. Use existing project evidence
